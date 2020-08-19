@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
+    
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -83,6 +90,10 @@
                 <div class="title m-b-md">
                     Aviação
                 </div>
+
+                <div class="alert alert-danger" role="alert">
+                    This is a danger alert—check it out!
+                  </div>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
