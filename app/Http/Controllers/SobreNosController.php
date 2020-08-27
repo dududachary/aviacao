@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TemplateController extends Controller
+class SobreNosController extends Controller
 {
     public function index()
     {
-        return view('publico.inicial');
+        return view('publico.sobre');
     }
 }

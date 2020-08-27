@@ -70,15 +70,15 @@
                   <div class="collapse navbar-collapse" id="exCollapsingNavbar">
 
                     <ul class="nav navbar-nav">
-                      <li class="nav-item active"><a href="#" class="nav-link">Inicial</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link">Sobre Nós</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link">Notícias</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link">Agenda de Eventos</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link">Legislação</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link">Parceiros</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link">Links Úteus</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link">Seja Um Membro</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                      <li class="nav-item active"><a href="{{ url('/inicial') }}" class="nav-link">Inicial</a></li>
+                      <li class="nav-item"><a href="{{ url('/sobre') }}" class="nav-link">Sobre Nós</a></li>
+                      <li class="nav-item"><a href="{{ url('/noticias') }}" class="nav-link">Notícias</a></li>
+                      <li class="nav-item"><a href="{{ url('/eventos') }}" class="nav-link">Agenda de Eventos</a></li>
+                      <li class="nav-item"><a href="{{ url('/legislacao') }}" class="nav-link">Legislação</a></li>
+                      <li class="nav-item"><a href="{{ url('/parceiros') }}" class="nav-link">Parceiros</a></li>
+                      <li class="nav-item"><a href="{{ url('/uteis') }}" class="nav-link">Links Úteus</a></li>
+                      <li class="nav-item"><a href="{{ url('/sejamembro') }}" class="nav-link">Seja Um Membro</a></li>
+                      <li class="nav-item"><a href="{{ url('/contato') }}" class="nav-link">Contato</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
@@ -131,7 +131,9 @@
         </section>
 
 
-        <section id="conteudo"></section>
+        <section id="conteudo">
+          @yield('conteudo')
+        </section>
 
 
         <section id="rodape">

@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'TemplateController@index');
+Route::get('/inicial', 'InicialController@index');
+Route::get('/sobre', 'SobreNosController@index');
+Route::get('/noticias', 'NoticiasController@index');
+Route::get('/eventos', 'AgendaEventosController@index');
+Route::get('/legislacao', 'LegislacaoController@index');
+Route::get('/parceiros', 'ParceirosController@index');
+Route::get('/uteis', 'LinksUteisController@index');
+Route::get('/sejamembro', 'SejaMembroController@index');
+Route::get('/contato', 'ContatoController@index');
 
 Auth::routes();
 
