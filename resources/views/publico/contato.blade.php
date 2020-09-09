@@ -1,4 +1,4 @@
-@extends('template')
+@extends('publico.template')
 
 @section('conteudo')
     <h2 class="text-center">Contato</h2>

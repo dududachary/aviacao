@@ -2,27 +2,35 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Rotas Públicas
+Route::group([
+    'middleware' => [],
+    'prefix'     => '',
+    'namespace'  => 'Publico'
+], function () {
+    Route::get('/', 'InicialController@index');
+    Route::get('/inicial', 'InicialController@index')->name('inicial');
+    Route::get('/sobre', 'SobreNosController@index')->name('sobre');
+    Route::get('/noticias', 'NoticiasController@index')->name('noticias');
+    Route::get('/eventos', 'AgendaEventosController@index')->name('eventos');
+    Route::get('/legislacao', 'LegislacaoController@index')->name('legislacao');
+    Route::get('/parceiros', 'ParceirosController@index')->name('parceiros');
+    Route::get('/uteis', 'LinksUteisController@index')->name('uteis');
+    Route::get('/sejamembro', 'SejaMembroController@index')->name('sejamembro');
+    Route::get('/contato', 'ContatoController@index')->name('contato');
+});
 
-Route::get('/', 'TemplateController@index');
-Route::get('/inicial', 'InicialController@index');
-Route::get('/sobre', 'SobreNosController@index');
-Route::get('/noticias', 'NoticiasController@index');
-Route::get('/eventos', 'AgendaEventosController@index');
-Route::get('/legislacao', 'LegislacaoController@index');
-Route::get('/parceiros', 'ParceirosController@index');
-Route::get('/uteis', 'LinksUteisController@index');
-Route::get('/sejamembro', 'SejaMembroController@index');
-Route::get('/contato', 'ContatoController@index');
+
+// Rotas Admin
+Route::group([
+    'middleware' => [],
+    'prefix'     => 'admin',
+    'namespace'  => 'Admin'
+], function () {
+    Route::get('/', 'DashboardController@index');
+    Route::get('/dashboard', 'DashboardController@index');
+});
+
 
 Auth::routes();
 
