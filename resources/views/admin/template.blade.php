@@ -21,7 +21,7 @@
             
                 <!-- Sidebar -->
                 <div class="bg-secundario" id="sidebar-wrapper">
-                    <div class="sidebar-heading nav-bx-shadow">ABEFAER </div>
+                    <div class="sidebar-heading nav-bx-shadow">ABEFAER</div>
                     <div class="list-group list-group-flush">
                         <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
                         <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
