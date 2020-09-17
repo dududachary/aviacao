@@ -34,19 +34,48 @@
 
     .bg-primario {
         background-color: $cor-primaria;
+        color: #FFF;
     }
 
     .bg-secundario {
         background-color: $cor-secundaria;
+        color: #FFF;
+    }
+
+    .bg-titulo {
+        background-color: $cor-titulo;
     }
 
     .list-group-item {
         background-color: inherit !important;
         color: white;
+        &:hover {
+            background-color: $cor-primaria !important;
+        }
     }
 
     .nav-bx-shadow {
         box-shadow: 0px 2px 0px rgba(0,0,0,0.4);
+    }
+
+    #menu-toggle {
+        background-color: $cor-secundaria !important;
+    }
+
+    .nav-item a{
+        color: white !important;
+        &:hover {
+            background-color: $cor-primaria;
+        }
+    }
+
+    .active {
+        background-color: $cor-primaria !important;
+    }
+
+    .btn-sm {
+        padding: 0.10rem 0.5rem !important;
+        font-size: 0.71rem !important;
     }
     
     @media (min-width: 768px) {

@@ -21,14 +21,113 @@
             
                 <!-- Sidebar -->
                 <div class="bg-secundario" id="sidebar-wrapper">
-                    <div class="sidebar-heading nav-bx-shadow">ABEFAER</div>
+                    <div class="sidebar-heading nav-bx-shadow">ABEFAER <i class="fas fa-plane"></i></div>
                     <div class="list-group list-group-flush">
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+
+                        <a href="{{ url('admin/meusdados') }}" class="list-group-item list-group-item-action bg-light">
+                            <i class="fas fa-address-card"></i> Meus Dados
+                        </a>
+
+                        <a class="list-group-item list-group-item-action bg-light"
+                           data-toggle="collapse" 
+                           href="#collapseGerais" 
+                           role="button" 
+                           aria-expanded="false" 
+                           aria-controls="collapseExample">
+                            <i class="fas fa-cog"></i> Gerais
+                        </a>
+                        <div class="collapse 
+                            {{ Request::is('admin/usuarios') ? 'show' : '' }} 
+                            {{ Request::is('admin/pessoas') ? 'show' : '' }}" 
+                            id="collapseGerais">
+
+                            <div class="list-group list-group-flush">
+                                <a href="{{ url('admin/usuarios') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/usuarios') ? 'active' : '' }}">
+                                    - Usuários
+                                </a>
+                                <a href="{{ url('admin/pessoas') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/pessoas') ? 'active' : '' }}">
+                                    - Pessoas
+                                </a>
+                            </div>
+                        </div>
+
+                        <a class="list-group-item list-group-item-action bg-light"
+                        data-toggle="collapse" 
+                        href="#collapseConteudos" 
+                        role="button" 
+                        aria-expanded="false" 
+                        aria-controls="collapseExample">
+                            <i class="fas fa-columns"></i> Conteúdos
+                        </a>
+                        <div class="collapse 
+                            {{ Request::is('admin/noticias') ? 'show' : '' }}
+                            {{ Request::is('admin/agendaeventos') ? 'show' : '' }}
+                            {{ Request::is('admin/parceiros') ? 'show' : '' }}
+                            {{ Request::is('admin/linksuteis') ? 'show' : '' }}" 
+                            id="collapseConteudos">
+
+                            <div class="list-group list-group-flush">
+                                <a href="{{ url('admin/noticias') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/noticias') ? 'active' : '' }}">
+                                    - Notícias
+                                </a>
+                                <a href="{{ url('admin/agendaeventos') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/agendaeventos') ? 'active' : '' }}">
+                                    - Agenda de Eventos
+                                </a>
+                                <a href="{{ url('admin/parceiros') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/parceiros') ? 'active' : '' }}">
+                                    - Parceiros
+                                </a>
+
+                                <a href="{{ url('admin/linksuteis') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/linksuteis') ? 'active' : '' }}">
+                                    - Links Úteis
+                                </a>
+                            </div>
+                        </div>
+
+                        <a class="list-group-item list-group-item-action bg-light"
+                        data-toggle="collapse" 
+                        href="#collapseProvas" 
+                        role="button" 
+                        aria-expanded="false" 
+                        aria-controls="collapseExample">
+                            <i class="fas fa-user-graduate"></i> Provas
+                        </a>
+                        <div class="collapse 
+                            {{ Request::is('admin/materias') ? 'show' : '' }}
+                            {{ Request::is('admin/questoes') ? 'show' : '' }}
+                            {{ Request::is('admin/aplicaprova') ? 'show' : '' }}" 
+                            id="collapseProvas">
+
+                            <div class="list-group list-group-flush">
+                                <a href="{{ url('admin/materias') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/materias') ? 'active' : '' }}">
+                                    - Cadastrar Matéria
+                                </a>
+                                <a href="{{ url('admin/questoes') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/questoes') ? 'active' : '' }}">
+                                    - Cadastrar Questões
+                                </a>
+                                <a href="{{ url('admin/aplicaprova') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/aplicaprova') ? 'active' : '' }}">
+                                    - Aplicar Prova
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!-- /#sidebar-wrapper -->
@@ -37,7 +136,9 @@
                 <div id="page-content-wrapper">
                     
                     <nav class="navbar navbar-expand-lg navbar-light bg-primario nav-bx-shadow">
-                        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+                        <i class="btn btn-secondary" id="menu-toggle">
+                            <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i>
+                        </i>
                         
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -45,21 +146,26 @@
                         
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('/inicial') }}">
+                                        <i class="fas fa-globe-americas"></i> Página Inicial <span class="sr-only">(current)</span>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
+                                    <a class="navbar-text" href=""> | </a>
                                 </li>
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown active">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Dropdown
+                                        <i class="fas fa-user-circle"></i> Nome do usuário
                                     </a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-menu dropdown-menu-right bg-secundario" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-address-card"></i> Meus Dados
+                                        </a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-sign-out-alt"></i> Sair
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
@@ -67,8 +173,19 @@
                     </nav>
                     
                     <div class="container-fluid">
-                        @yield('conteudo')
+
+                        <div class="card mt-3">
+                            <div class="card-header bg-secundario text-white text-uppercase">
+                                @yield('titulo')
+                                @yield('botao')
+                            </div>
+                            <div class="card-body">
+                                @yield('conteudo')
+                            </div>
+                        </div>
+                        
                     </div>
+
                 </div>
                 <!-- /#page-content-wrapper -->
                 

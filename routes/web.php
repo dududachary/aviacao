@@ -27,8 +27,17 @@ Route::group([
     'prefix'     => 'admin',
     'namespace'  => 'Admin'
 ], function () {
-    Route::get('/', 'DashboardController@index');
-    Route::get('/dashboard', 'DashboardController@index');
+    Route::get('/', 'MeusDadosController@index');
+    Route::get('/meusdados', 'MeusDadosController@index');
+    Route::get('/usuarios', 'UsuariosController@index');
+    Route::get('/pessoas', 'PessoasController@index');
+    Route::get('/noticias', 'NoticiasController@index');
+    Route::get('/agendaeventos', 'AgendaEventosController@index');
+    Route::get('/parceiros', 'ParceirosController@index');
+    Route::get('/linksuteis', 'LinksUteisController@index');
+    Route::get('/materias', 'MateriasController@index');
+    Route::get('/questoes', 'QuestoesController@index');
+    Route::get('/aplicaprova', 'AplicaProvaController@index');
 });
 
 

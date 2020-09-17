@@ -6124,10 +6124,16 @@ readers do not read off random characters that represent icons */
 
 #template-admin .bg-primario {
   background-color: #2E516DFF;
+  color: #FFF;
 }
 
 #template-admin .bg-secundario {
   background-color: #2E516DCC;
+  color: #FFF;
+}
+
+#template-admin .bg-titulo {
+  background-color: #2e516db0;
 }
 
 #template-admin .list-group-item {
@@ -6135,8 +6141,34 @@ readers do not read off random characters that represent icons */
   color: white;
 }
 
+#template-admin .list-group-item:hover {
+  background-color: #2E516DFF !important;
+}
+
 #template-admin .nav-bx-shadow {
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+#template-admin #menu-toggle {
+  background-color: #2E516DCC !important;
+}
+
+#template-admin .nav-item a {
+  color: white !important;
+}
+
+#template-admin .nav-item a:hover {
+  background-color: #2E516DFF;
+}
+
+#template-admin .active {
+  background-color: #2E516DFF !important;
+}
+
+#template-admin .btn-sm,
+#template-admin .btn-group-sm > .btn {
+  padding: 0.1rem 0.5rem !important;
+  font-size: 0.71rem !important;
 }
 
 @media (min-width: 768px) {
