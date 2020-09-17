@@ -29,8 +29,9 @@ Route::group([
 ], function () {
     Route::get('/', 'MeusDadosController@index');
     Route::get('/meusdados', 'MeusDadosController@index');
-    Route::get('/usuarios', 'UsuariosController@index');
+    Route::get('/entidades', 'EntidadesController@index');
     Route::get('/pessoas', 'PessoasController@index');
+    Route::get('/usuarios', 'UsuariosController@index');
     Route::get('/noticias', 'NoticiasController@index');
     Route::get('/agendaeventos', 'AgendaEventosController@index');
     Route::get('/parceiros', 'ParceirosController@index');

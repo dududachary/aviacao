@@ -37,20 +37,26 @@
                             <i class="fas fa-cog"></i> Gerais
                         </a>
                         <div class="collapse 
+                            {{ Request::is('admin/entidades') ? 'show' : '' }}
                             {{ Request::is('admin/usuarios') ? 'show' : '' }} 
                             {{ Request::is('admin/pessoas') ? 'show' : '' }}" 
                             id="collapseGerais">
 
                             <div class="list-group list-group-flush">
-                                <a href="{{ url('admin/usuarios') }}" 
+                                <a href="{{ url('admin/entidades') }}" 
                                    class="list-group-item list-group-item-action bg-light
-                                   {{ Request::is('admin/usuarios') ? 'active' : '' }}">
-                                    - Usuários
+                                   {{ Request::is('admin/entidades') ? 'active' : '' }}">
+                                   - Entidades
                                 </a>
                                 <a href="{{ url('admin/pessoas') }}" 
                                    class="list-group-item list-group-item-action bg-light
                                    {{ Request::is('admin/pessoas') ? 'active' : '' }}">
                                     - Pessoas
+                                </a>
+                                <a href="{{ url('admin/usuarios') }}" 
+                                   class="list-group-item list-group-item-action bg-light
+                                   {{ Request::is('admin/usuarios') ? 'active' : '' }}">
+                                    - Usuários
                                 </a>
                             </div>
                         </div>
