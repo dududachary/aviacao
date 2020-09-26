@@ -6165,8 +6165,7 @@ readers do not read off random characters that represent icons */
   background-color: #2E516DFF !important;
 }
 
-#template-admin .btn-sm,
-#template-admin .btn-group-sm > .btn {
+#template-admin .btn-add {
   padding: 0.1rem 0.5rem !important;
   font-size: 0.71rem !important;
 }

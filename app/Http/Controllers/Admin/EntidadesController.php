@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Entidade;
 
 class EntidadesController extends Controller
 {
@@ -14,7 +16,9 @@ class EntidadesController extends Controller
      */
     public function index()
     {
-        return view('admin.entidades');
+        $listar_entidades = Entidade::all();
+
+        return view('admin.entidades.entidades')->with('listar_entidades', $listar_entidades);
     }
 
     /**
@@ -24,7 +28,7 @@ class EntidadesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.entidades.entidadesCreate');
     }
 
     /**
