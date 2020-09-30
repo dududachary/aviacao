@@ -43,7 +43,10 @@
                                 {{ Request::is('admin/entidades/edit/'.$lista_entidade->id) ? 'show' : '' }}
                             @endisset
                             {{ Request::is('admin/usuarios') ? 'show' : '' }} 
-                            {{ Request::is('admin/pessoas') ? 'show' : '' }}" 
+                            {{ Request::is('admin/pessoas/index') ? 'show' : '' }}
+                            {{ Request::is('admin/pessoas/type') ? 'show' : '' }}
+                            {{ Request::is('admin/pessoas/create/F') ? 'show' : '' }}
+                            {{ Request::is('admin/pessoas/create/J') ? 'show' : '' }}" 
                             id="collapseCadastros">
 
                             <div class="list-group list-group-flush">
@@ -57,9 +60,13 @@
                                    ">
                                    - Entidades
                                 </a>
-                                <a href="{{ url('admin/pessoas') }}" 
+                                <a href="{{ url('admin/pessoas/index') }}" 
                                    class="list-group-item list-group-item-action bg-light
-                                   {{ Request::is('admin/pessoas') ? 'active' : '' }}">
+                                   {{ Request::is('admin/pessoas/index') ? 'active' : '' }}
+                                   {{ Request::is('admin/pessoas/type') ? 'active' : '' }}
+                                   {{ Request::is('admin/pessoas/create/F') ? 'active' : '' }}
+                                   {{ Request::is('admin/pessoas/create/J') ? 'active' : '' }}
+                                   ">
                                     - Pessoas
                                 </a>
                                 <a href="{{ url('admin/usuarios') }}" 

@@ -38,7 +38,11 @@ Route::group([
     Route::get('/entidades/destroy/{id}', 'EntidadesController@destroy');
 
 
-    Route::get('/pessoas', 'PessoasController@index');
+    Route::get('/pessoas/index', 'PessoasController@index');
+    Route::get('/pessoas/type', 'PessoasController@type');
+    Route::get('/pessoas/create/{type}', 'PessoasController@create');
+    Route::get('/pessoas/create/{type}', 'PessoasController@create');
+
     Route::get('/usuarios', 'UsuariosController@index');
     Route::get('/noticias', 'NoticiasController@index');
     Route::get('/agendaeventos', 'AgendaEventosController@index');
