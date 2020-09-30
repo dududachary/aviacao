@@ -77,6 +77,11 @@
         padding: 0.10rem 0.5rem !important;
         font-size: 0.71rem !important;
     }
+
+    .errors {
+        margin-bottom: 0px !important;
+        list-style-type: none !important;
+    }
     
     @media (min-width: 768px) {
         #sidebar-wrapper {

@@ -30,22 +30,31 @@
 
                         <a class="list-group-item list-group-item-action bg-light"
                            data-toggle="collapse" 
-                           href="#collapseGerais" 
+                           href="#collapseCadastros" 
                            role="button" 
                            aria-expanded="false" 
                            aria-controls="collapseExample">
-                            <i class="fas fa-cog"></i> Gerais
+                            <i class="fas fa-cog"></i> Cadastros
                         </a>
                         <div class="collapse 
-                            {{ Request::is('admin/entidades') ? 'show' : '' }}
+                            {{ Request::is('admin/entidades/index') ? 'show' : '' }}
+                            {{ Request::is('admin/entidades/create') ? 'show' : '' }}
+                            @isset($lista_entidade->id)
+                                {{ Request::is('admin/entidades/edit/'.$lista_entidade->id) ? 'show' : '' }}
+                            @endisset
                             {{ Request::is('admin/usuarios') ? 'show' : '' }} 
                             {{ Request::is('admin/pessoas') ? 'show' : '' }}" 
-                            id="collapseGerais">
+                            id="collapseCadastros">
 
                             <div class="list-group list-group-flush">
-                                <a href="{{ url('admin/entidades') }}" 
+                                <a href="{{ url('admin/entidades/index') }}" 
                                    class="list-group-item list-group-item-action bg-light
-                                   {{ Request::is('admin/entidades') ? 'active' : '' }}">
+                                   {{ Request::is('admin/entidades/index') ? 'active' : '' }}
+                                   {{ Request::is('admin/entidades/create') ? 'active' : '' }}
+                                   @isset($lista_entidade->id)
+                                   {{ Request::is('admin/entidades/edit/'.$lista_entidade->id) ? 'active' : '' }}
+                                    @endisset
+                                   ">
                                    - Entidades
                                 </a>
                                 <a href="{{ url('admin/pessoas') }}" 

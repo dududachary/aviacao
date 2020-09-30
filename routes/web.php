@@ -30,8 +30,12 @@ Route::group([
     Route::get('/', 'MeusDadosController@index');
     Route::get('/meusdados', 'MeusDadosController@index');
 
-    Route::get('/entidades', 'EntidadesController@index');    
+    Route::get('/entidades/index', 'EntidadesController@index');    
     Route::get('/entidades/create', 'EntidadesController@create');
+    Route::post('/entidades/store', 'EntidadesController@store');
+    Route::get('/entidades/edit/{id}', 'EntidadesController@edit');
+    Route::post('/entidades/update/{id}', 'EntidadesController@update');
+    Route::get('/entidades/destroy/{id}', 'EntidadesController@destroy');
 
 
     Route::get('/pessoas', 'PessoasController@index');

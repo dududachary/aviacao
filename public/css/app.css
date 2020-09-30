@@ -6170,6 +6170,11 @@ readers do not read off random characters that represent icons */
   font-size: 0.71rem !important;
 }
 
+#template-admin .errors {
+  margin-bottom: 0px !important;
+  list-style-type: none !important;
+}
+
 @media (min-width: 768px) {
   #template-admin #sidebar-wrapper {
     margin-left: 0;
