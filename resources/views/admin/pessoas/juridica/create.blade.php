@@ -9,9 +9,10 @@
 @endsection
 
 @section('conteudo')
-<form action="" method="POST">
+<form action="{{ action('Admin\PessoasController@store') }}" method="POST">
     <input type="hidden" name="create" value="create">
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
+    <input type="hidden" name="tipo_pessoa" value="J">
 
     <div class="card mb-3">
         <div class="card-header">
@@ -20,31 +21,21 @@
         <div class="card-body">
             <div class="form-group">
                 <div class="form-row">
-                    <div class="col-2">
-                        <label for="catogoria">Categoria</label>
-                        <select id="catogoria" 
-                            name="catogoria"
-                            class="form-control">
-                            <option value="Geral">Geral</option>
-                            <option value="Sócio">Sócio</option>
-                            <option value="Representante">Representante</option>
-                        </select>                             
-                    </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <label for="nome_fantasia">Nome Fantasia</label>
                             <input id="nome_fantasia"
                                 name="nome_fantasia"
                                 type="text" class="form-control" 
-                                placeholder="Digite o nome fantasia aqui..."
+                                placeholder="Informe o nome fantasia aqui..."
                                 value=""
                             >                                    
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <label for="razao_social">Razão Social</label>
                             <input id="razao_social"
                                 name="razao_social"
                                 type="text" class="form-control" 
-                                placeholder="Digite a razão social aqui..."
+                                placeholder="'Informe' a razão social aqui..."
                                 value=""
                             >                                    
                     </div>
@@ -58,7 +49,7 @@
                             <input id="cnpj"
                                 name="cnpj"
                                 type="text" class="form-control" 
-                                placeholder="Digite o CNPJ aqui..."
+                                placeholder="Informe o CNPJ aqui..."
                                 value=""
                             >                                    
                     </div>
@@ -97,7 +88,7 @@
                             <input id="logradouro"
                                 name="logradouro"
                                 type="text" class="form-control" 
-                                placeholder="Digite o nome do logradouro aqui..."
+                                placeholder="Informe o nome do logradouro aqui..."
                                 value=""
                             >                                    
                     </div>
@@ -106,7 +97,7 @@
                             <input id="numero"
                                 name="numero"
                                 type="text" class="form-control" 
-                                placeholder="Digite o numero aqui..."
+                                placeholder="Informe o numero aqui..."
                                 value=""
                             >                                    
                     </div>
@@ -115,7 +106,7 @@
                             <input id="bairro"
                                 name="bairro"
                                 type="text" class="form-control" 
-                                placeholder="Digite o nome do bairro aqui..."
+                                placeholder="Informe o nome do bairro aqui..."
                                 value=""
                             >                                    
                     </div>
@@ -207,9 +198,9 @@
                             >                                    
                     </div>
                     <div class="col-3">
-                        <label for="fone_residencial">Telefone Comercial</label>
-                            <input id="fone_residencial"
-                                name="fone_residencial"
+                        <label for="fone_comercial">Telefone Comercial</label>
+                            <input id="fone_comercial"
+                                name="fone_comercial"
                                 type="text" class="form-control" 
                                 placeholder="Informe o telefone aqui..."
                                 value=""
@@ -236,18 +227,80 @@
         <div class="card-body">
             <div class="form-group">
                 <div class="form-row">
-                    <div class="col-2">
-                        <label for="situacao">Situação</label>
-                        <select id="situacao" 
-                            name="situacao"
+                    <div class="col-3">
+                        <label for="relacionamento">Relacionamento</label>
+                        <select id="relacionamento" 
+                            name="relacionamento"
                             class="form-control">
-                            <option value="Geral">Ativo</option>
-                            <option value="Sócio">Inativo</option>
+                            <option value="Proposta de Sociedade">Proposta de Sociedade</option>
+                            <option value="Sócio Inativo">Sócio Inativo</option>
+                            <option value="Sócio Ativo">Sócio Ativo</option>
+                            <option value="Parceiro">Parceiro</option>
+                        </select>                             
+                    </div>
+                    <div class="col-3">
+                        <label for="codigo_anac">Código ANAC</label>
+                            <input id="codigo_anac"
+                                name="codigo_anac"
+                                type="text" class="form-control" 
+                                placeholder="Informe o código ANAC aqui..."
+                                value=""
+                            >                                    
+                    </div>
+                    <div class="col-3">
+                        <label for="classe_cma">Classe do CMA</label>
+                        <select id="classe_cma" 
+                            name="classe_cma"
+                            class="form-control">
+                            <option value="N/A">Não Informado</option>
+                            <option value="1ª Classe">1ª Classe</option>
+                            <option value="2ª Classe">2ª Classe</option>
+                            <option value="3ª Classe">3ª Classe</option>
+                            <option value="4ª Classe">4ª Classe</option>
+                            <option value="5ª Classe">5ª Classe</option>
+                        </select>                             
+                    </div>
+                    <div class="col-3">
+                        <label for="validade_cma">Validade do CMA</label>
+                            <input id="validade_cma"
+                                name="validade_cma"
+                                type="text" class="form-control" 
+                                placeholder="Informe a validade do CMA aqui..."
+                                value=""
+                            >                                    
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-12">
+                        <label for="observacoes_pessoa">Observações</label>
+                            <input id="observacoes_pessoa"
+                                name="observacoes_pessoa"
+                                type="text" class="form-control" 
+                                placeholder="Informe alguma observação aqui..."
+                                value=""
+                            >                                    
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-3">
+                        <label for="id_entidade">Entidade Reponsável</label>
+                        <select id="id_entidade" 
+                            name="id_entidade"
+                            class="form-control">
+                            <option value="">Não Informado</option>
+
+                            @foreach ($entidades_select as $entidade)
+                                <option value="{{$entidade->id}}">{{$entidade->nome}}</option>
+                            @endforeach
+
                         </select>                             
                     </div>
                 </div>
             </div>
-            <p>Não existe usuário cadastrado para esta pessoa</p>
         </div>
     </div>
 

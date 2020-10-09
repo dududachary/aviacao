@@ -17,7 +17,7 @@ class EntidadesController extends Controller
     
     public function index()
     {
-        $listar_entidades = Entidade::all()->sortByDesc("id");;
+        $listar_entidades = Entidade::all()->sortByDesc("id");
 
         return view('admin.entidades.index')->with('listar_entidades', $listar_entidades);
     }
@@ -59,12 +59,7 @@ class EntidadesController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
