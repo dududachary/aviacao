@@ -43,8 +43,8 @@ Route::group([
     Route::get('/pessoas/create/{type}', 'PessoasController@create');
     Route::get('/pessoas/create/{type}', 'PessoasController@create');
     Route::post('/pessoas/store', 'PessoasController@store');
-    // Route::get('/entidades/edit/{id}', 'EntidadesController@edit');
-    // Route::post('/entidades/update/{id}', 'EntidadesController@update');
+    Route::get('/pessoas/edit/{id}', 'PessoasController@edit');
+    Route::post('/pessoas/update/{id}', 'PessoasController@update');
     Route::get('/pessoas/destroy/{id}', 'PessoasController@destroy');
 
     Route::get('/usuarios', 'UsuariosController@index');

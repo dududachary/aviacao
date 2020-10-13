@@ -9,6 +9,20 @@
 @endsection
 
 @section('conteudo')
+
+    {{-- @if ( count($errors) > 0)
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+            <ul class="errors">
+                @foreach ($errors->all() as $error)
+                    <li><i class="fas fa-exclamation-circle"></i> - {{ $error }}</li>
+                @endforeach
+            </ul>
+
+        </div>
+    @endif --}}
+
 <form action="{{ action('Admin\PessoasController@store') }}" method="POST">
     <input type="hidden" name="create" value="create">
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}">

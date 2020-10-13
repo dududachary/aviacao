@@ -45,13 +45,9 @@
                         <td>{{ $pessoa->nome_pessoal }} {{ $pessoa->nome_fantasia }}</td>
                         <td class="text-center">
 
-                            {{-- <a class="btn btn-sm btn-primary" href="{{ action('Admin\EntidadesController@edit', $entidade->id) }}">
+                            <a class="btn btn-sm btn-primary" href="{{ action('Admin\PessoasController@edit', $pessoa->id) }}">
                                 Alterar
-                            </a> --}} 
-                             
-                            <a class="btn btn-sm btn-primary" href="#">
-                                Alterar
-                            </a>
+                            </a> 
 
                             <a class="btn btn-sm btn-danger href="#" onclick="destroy('{{ action('Admin\PessoasController@destroy', $pessoa->id) }}');">
                                 Apagar    
