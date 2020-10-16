@@ -44,7 +44,7 @@ class CreatePessoasTable extends Migration
             $table->string('bairro', 250)->nullable();
             $table->string('complemento', 250)->nullable();
             $table->string('cidade', 250)->nullable();
-            $table->string('estado', 2)->nullable();
+            $table->string('estado', 50)->nullable();
             $table->integer('cep')->nullable();
 
             $table->string('email', 250)->nullable();

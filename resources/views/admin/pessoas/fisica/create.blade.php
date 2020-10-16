@@ -10,18 +10,18 @@
 
 @section('conteudo')
 
-    {{-- @if ( count($errors) > 0)
+    @if ( count($errors) > 0)
         <div class="alert alert-danger alert-dismissible">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
 
             <ul class="errors">
                 @foreach ($errors->all() as $error)
-                    <li><i class="fas fa-exclamation-circle"></i> - {{ $error }}</li>
+                    <li><i class="fas fa-exclamation-circle text-danger"></i> - {{ $error }}</li>
                 @endforeach
             </ul>
 
         </div>
-    @endif --}}
+    @endif
 
 <form action="{{ action('Admin\PessoasController@store') }}" method="POST">
     <input type="hidden" name="create" value="create">
@@ -36,12 +36,17 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-6">
-                        <label for="nome_pessoal">Nome Pessoal</label>
+
+                        @error('nome_pessoal')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="nome_pessoal" class="obrigatorio">Nome Pessoal</label>
                             <input id="nome_pessoal"
                                 name="nome_pessoal"
                                 type="text" class="form-control" 
                                 placeholder="Digite o nome pessoal aqui..."
-                                value=""
+                                value="{{old('nome_pessoal')}}"
                             >                                    
                     </div>
                     <div class="col-6">
@@ -50,7 +55,7 @@
                                 name="nome_social"
                                 type="text" class="form-control" 
                                 placeholder="Digite o nome social aqui..."
-                                value=""
+                                value="{{old('nome_social')}}"
                             >                                    
                     </div>
                 </div>
@@ -59,30 +64,45 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-5">
+
+                        @error('nome_pai')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="nome_pai">Nome do Pai</label>
                             <input id="nome_pai"
                                 name="nome_pai"
                                 type="text" class="form-control" 
                                 placeholder="Digite o nome do pai aqui..."
-                                value=""
+                                value="{{old('nome_pai')}}"
                             >                                    
                     </div>
                     <div class="col-5">
+
+                        @error('nome_mae')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="nome_mae">Nome da Mãe</label>
                             <input id="nome_mae"
                                 name="nome_mae"
                                 type="text" class="form-control" 
                                 placeholder="Digite o nome da mãe aqui..."
-                                value=""
+                                value="{{old('nome_mae')}}"
                             >                                    
                     </div>
                     <div class="col-2">
-                        <label for="dt_nascimento">Data de Nascimento</label>
+
+                        @error('dt_nascimento')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="dt_nascimento" class="obrigatorio">Nascimento</label>
                             <input id="dt_nascimento"
                                 name="dt_nascimento"
                                 type="text" class="form-control" 
-                                placeholder="Digite data de nascimento aqui..."
-                                value=""
+                                placeholder="Ex.: dd/mm/aaaa"
+                                value="{{old('dt_nascimento')}}"
                             >                                    
                     </div>
                 </div>
@@ -91,30 +111,55 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-6">
+
+                        @error('sinais_particulares')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="sinais_particulares">Sinais Particulares</label>
                             <input id="sinais_particulares"
                                 name="sinais_particulares"
                                 type="text" class="form-control" 
                                 placeholder="Informe os sinais particulares aqui..."
-                                value=""
+                                value="{{old('sinais_particulares')}}"
                             >                                    
                     </div>
                     <div class="col-2">
+
+                        @error('sexo')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="sexo">Sexo</label>
                         <select id="sexo" 
                             name="sexo"
                             class="form-control">
-                            <option value="NA">Não informado</option>
-                            <option value="masulino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                            <option value="personalizado">Personalizado</option>
+                            
+                            @if (old('sexo'))
+                                <option value="{{old('sexo')}}">{{old('sexo')}}</option>
+                            @endif
+
+                            <option value="Não Informado">Não informado</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Personalizado">Personalizado</option>
                         </select>                             
                     </div>
                     <div class="col-4">
+
+                        @error('escolaridade')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="escolaridade">Escolaridade</label>
                         <select id="escolaridade" 
                             name="escolaridade"
                             class="form-control">
+
+                            @if (old('escolaridade'))
+                                <option value="{{old('escolaridade')}}">{{old('escolaridade')}}</option>
+                            @endif
+
                             <option value="Não Informado">Não Informado</option>
                             <option value="Fundamental - Incompleto">Fundamental - Incompleto</option>
                             <option value="Fundamental - Completo">Fundamental - Completo</option>
@@ -136,10 +181,20 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-2">
+
+                        @error('tp_sangue')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="tp_sangue">Tipo Sanguíneo</label>
                         <select id="tp_sangue" 
                             name="tp_sangue"
                             class="form-control">
+
+                            @if (old('escolaridade'))
+                                <option value="{{old('escolaridade')}}">{{old('escolaridade')}}</option>
+                            @endif
+
                             <option value="NA">Não Informado</option>
                             <option value="A+">A+</option>
                             <option value="A-">A-</option>
@@ -152,48 +207,73 @@
                         </select>                             
                     </div>
                     <div class="col-2">
-                        <label for="cpf">CPF</label>
+
+                        @error('cpf')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="cpf" class="obrigatorio">CPF</label>
                             <input id="cpf"
                                 name="cpf"
                                 type="text" class="form-control" 
-                                placeholder="Informe o CPF aqui..."
-                                value=""
+                                placeholder="Somente números..."
+                                value="{{old('cpf')}}"
                             >                                    
                     </div>
                     <div class="col-2">
+
+                        @error('identidade')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="identidade">Identidade</label>
                             <input id="identidade"
                                 name="identidade"
                                 type="text" class="form-control" 
                                 placeholder="Informe a Identidade aqui..."
-                                value=""
+                                value="{{old('identidade')}}"
                             >                                    
                     </div>
                     <div class="col-2">
+
+                        @error('orgao_expeditor')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="orgao_expeditor">Orgão Expeditor</label>
                             <input id="orgao_expeditor"
                                 name="orgao_expeditor"
                                 type="text" class="form-control" 
                                 placeholder="Informe o orgão expeditor aqui..."
-                                value=""
+                                value="{{old('orgao_expeditor')}}"
                             >                                    
                     </div>
                     <div class="col-2">
+
+                        @error('titulo_eleitor')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="titulo_eleitor">Título de Eleitor</label>
                             <input id="titulo_eleitor"
                                 name="titulo_eleitor"
                                 type="text" class="form-control" 
                                 placeholder="Informe o titulo de eleitor aqui..."
-                                value=""
+                                value="{{old('titulo_eleitor')}}"
                             >                                    
                     </div>
                     <div class="col-2">
+
+                        @error('certificado_militar')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="certificado_militar">Certificado Militar</label>
                             <input id="certificado_militar"
                                 name="certificado_militar"
                                 type="text" class="form-control" 
                                 placeholder="Informe o certificado militar aqui..."
-                                value=""
+                                value="{{old('certificado_militar')}}"
                             >                                    
                     </div>
                 </div>
@@ -209,30 +289,45 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-4">
-                        <label for="logradouro">Logradouro</label>
+
+                        @error('logradouro')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="logradouro" class="obrigatorio">Logradouro</label>
                             <input id="logradouro"
                                 name="logradouro"
                                 type="text" class="form-control" 
                                 placeholder="Digite o nome do logradouro aqui..."
-                                value=""
+                                value="{{old('logradouro')}}"
                             >                                    
                     </div>
                     <div class="col-4">
-                        <label for="numero">Número</label>
+
+                        @error('numero')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="numero" class="obrigatorio">Número</label>
                             <input id="numero"
                                 name="numero"
                                 type="text" class="form-control" 
                                 placeholder="Digite o numero aqui..."
-                                value=""
+                                value="{{old('numero')}}"
                             >                                    
                     </div>
                     <div class="col-4">
+
+                        @error('bairro')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="bairro">Bairro</label>
                             <input id="bairro"
                                 name="bairro"
                                 type="text" class="form-control" 
                                 placeholder="Digite o nome do bairro aqui..."
-                                value=""
+                                value="{{old('bairro')}}"
                             >                                    
                     </div>
                 </div>
@@ -241,64 +336,90 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-4">
+
+                        @error('complemento')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="complemento">Complemento</label>
                             <input id="complemento"
                                 name="complemento"
                                 type="text" class="form-control" 
                                 placeholder="Informe o Complemento aqui..."
-                                value=""
+                                value="{{old('complemento')}}"
                             >                                    
                     </div>
                     <div class="col-3">
-                        <label for="cidade">Cidade</label>
+
+                        @error('cidade')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="cidade" class="obrigatorio">Cidade</label>
                             <input id="cidade"
                                 name="cidade"
                                 type="text" class="form-control" 
                                 placeholder="Informe a Cidade aqui..."
-                                value=""
+                                value="{{old('cidade')}}"
                             >                                    
                     </div>
                     <div class="col-3">
-                        <label for="estado">Estado</label>
+
+                        @error('estado')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="estado" class="obrigatorio">Estado</label>
                         <select id="estado" 
                             name="estado"
                             class="form-control">
-                            <option value="AC">AC - Acre</option>
-                            <option value="AL">AL - Alagoas</option>
-                            <option value="AP">AP - Amapá</option>
-                            <option value="AM">AM - Amazonas</option>
-                            <option value="BA">BA - Bahia</option>
-                            <option value="CE">CE - Ceará</option>
-                            <option value="DF">DF - Distrito Federal</option>
-                            <option value="ES">ES - Espírito Santo</option>
-                            <option value="GO">GO - Goiás</option>
-                            <option value="MA">MA - Maranhão</option>
-                            <option value="MT">MT - Mato Grosso</option>
-                            <option value="MS">MS - Mato Grosso do Sul</option>
-                            <option value="MG">MG - Minas Gerais</option>
-                            <option value="PA">PA - Pará</option>
-                            <option value="PB">PB - Paraíba</option>
-                            <option value="PR">PR - Paraná</option>
-                            <option value="PE">PE - Pernambuco</option>
-                            <option value="PI">PI - Piauí</option>
-                            <option value="RJ">RJ - Rio de Janeiro</option>
-                            <option value="RN">RN - Rio Grande do Norte</option>
-                            <option value="RS">RS - Rio Grande do Sul</option>
-                            <option value="RO">RO - Rondônia</option>
-                            <option value="RR">RR - Roraima</option>
-                            <option value="SC">SC - Santa Catarina</option>
-                            <option value="SP">SP - São Paulo</option>
-                            <option value="SE">SE - Sergipe</option>
-                            <option value="TO">TO - Tocantins</option>
+
+                            @if (old('estado'))
+                                <option value="{{old('estado')}}">{{old('estado')}}</option>
+                            @endif
+
+                            <option value="">Não Informado</option>
+                            <option value="AC - Acre">AC - Acre</option>
+                            <option value="AL - Alagoas">AL - Alagoas</option>
+                            <option value="AP - Amapá">AP - Amapá</option>
+                            <option value="AM - Amazonas">AM - Amazonas</option>
+                            <option value="BA - Bahia">BA - Bahia</option>
+                            <option value="CE - Ceará">CE - Ceará</option>
+                            <option value="DF - Distrito Federal">DF - Distrito Federal</option>
+                            <option value="ES - Espírito Santo">ES - Espírito Santo</option>
+                            <option value="GO - Goiás">GO - Goiás</option>
+                            <option value="MA - Maranhão">MA - Maranhão</option>
+                            <option value="MT - Mato Grosso">MT - Mato Grosso</option>
+                            <option value="MS - Mato Grosso do Sul">MS - Mato Grosso do Sul</option>
+                            <option value="MG - Minas Gerais">MG - Minas Gerais</option>
+                            <option value="PA - Pará">PA - Pará</option>
+                            <option value="PB - Paraíba">PB - Paraíba</option>
+                            <option value="PR - Paraná">PR - Paraná</option>
+                            <option value="PE - Pernambuco">PE - Pernambuco</option>
+                            <option value="PI - Piauí">PI - Piauí</option>
+                            <option value="RJ - Rio de Janeiro">RJ - Rio de Janeiro</option>
+                            <option value="RN - Rio Grande do Norte">RN - Rio Grande do Norte</option>
+                            <option value="RS - Rio Grande do Sul">RS - Rio Grande do Sul</option>
+                            <option value="RO - Rondônia">RO - Rondônia</option>
+                            <option value="RR - Roraima">RR - Roraima</option>
+                            <option value="SC - Santa Catarina">SC - Santa Catarina</option>
+                            <option value="SP - São Paulo">SP - São Paulo</option>
+                            <option value="SE - Sergipe">SE - Sergipe</option>
+                            <option value="TO - Tocantins">TO - Tocantins</option>
                         </select>                             
                     </div>
                     <div class="col-2">
-                        <label for="cep">CEP</label>
+
+                        @error('cep')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="cep" class="obrigatorio">CEP</label>
                             <input id="cep"
                                 name="cep"
                                 type="text" class="form-control" 
                                 placeholder="Informe o CEP aqui..."
-                                value=""
+                                value="{{old('cep')}}"
                             >                                    
                     </div>
                 </div>
@@ -314,30 +435,45 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-6">
-                        <label for="email">E-mail</label>
+
+                        @error('email')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="email" class="obrigatorio">E-mail</label>
                             <input id="email"
                                 name="email"
                                 type="text" class="form-control" 
                                 placeholder="Informe o e-mail aqui..."
-                                value=""
+                                value="{{old('email')}}"
                             >                                    
                     </div>
                     <div class="col-3">
+
+                        @error('fone_residencial')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="fone_residencial">Telefone Residencial</label>
                             <input id="fone_residencial"
                                 name="fone_residencial"
                                 type="text" class="form-control" 
                                 placeholder="Informe o telefone aqui..."
-                                value=""
+                                value="{{old('fone_residencial')}}"
                             >                                    
                     </div>
                     <div class="col-3">
-                        <label for="fone_celular">Telefone Celular</label>
+
+                        @error('fone_celular')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="fone_celular" class="obrigatorio">Telefone Celular</label>
                             <input id="fone_celular"
                                 name="fone_celular"
                                 type="text" class="form-control" 
                                 placeholder="Informe o telefone aqui..."
-                                value=""
+                                value="{{old('fone_celular')}}"
                             >                                    
                     </div>
                 </div>
@@ -353,10 +489,20 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-3">
-                        <label for="relacionamento">Relacionamento</label>
+
+                        @error('relacionamento')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="relacionamento" class="obrigatorio">Relacionamento</label>
                         <select id="relacionamento" 
                             name="relacionamento"
                             class="form-control">
+
+                            @if (old('relacionamento'))
+                                <option value="{{old('relacionamento')}}">{{old('relacionamento')}}</option>
+                            @endif
+
                             <option value="Proposta de Sociedade">Proposta de Sociedade</option>
                             <option value="Sócio Inativo">Sócio Inativo</option>
                             <option value="Sócio Ativo">Sócio Ativo</option>
@@ -364,20 +510,35 @@
                         </select>                             
                     </div>
                     <div class="col-3">
+
+                        @error('codigo_anac')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="codigo_anac">Código ANAC</label>
                             <input id="codigo_anac"
                                 name="codigo_anac"
                                 type="text" class="form-control" 
                                 placeholder="Informe o código ANAC aqui..."
-                                value=""
+                                value="{{old('codigo_anac')}}"
                             >                                    
                     </div>
                     <div class="col-3">
+
+                        @error('classe_cma')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="classe_cma">Classe do CMA</label>
                         <select id="classe_cma" 
                             name="classe_cma"
                             class="form-control">
-                            <option value="N/A">Não Informado</option>
+
+                            @if (old('classe_cma'))
+                                <option value="{{old('classe_cma')}}">{{old('classe_cma')}}</option>
+                            @endif
+
+                            <option value="Não Informado">Não Informado</option>
                             <option value="1ª Classe">1ª Classe</option>
                             <option value="2ª Classe">2ª Classe</option>
                             <option value="3ª Classe">3ª Classe</option>
@@ -391,7 +552,7 @@
                                 name="validade_cma"
                                 type="text" class="form-control" 
                                 placeholder="Informe a validade do CMA aqui..."
-                                value=""
+                                value="{{old('validade_cma')}}"
                             >                                    
                     </div>
                 </div>
@@ -399,12 +560,17 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-12">
+
+                        @error('observacoes')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
                         <label for="observacoes_pessoa">Observações</label>
                             <input id="observacoes_pessoa"
                                 name="observacoes_pessoa"
                                 type="text" class="form-control" 
                                 placeholder="Informe alguma observação aqui..."
-                                value=""
+                                value="{{old('observacoes_pessoa')}}"
                             >                                    
                     </div>
                 </div>
@@ -412,7 +578,12 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-3">
-                        <label for="id_entidade">Entidade Reponsável</label>
+                        
+                        @error('id_entidade')
+                            <i class="fas fa-exclamation-circle text-danger"></i>
+                        @enderror
+
+                        <label for="id_entidade" class="obrigatorio">Entidade Reponsável</label>
                         <select id="id_entidade" 
                             name="id_entidade"
                             class="form-control">

@@ -15,19 +15,33 @@
 
     @isset($listar_pessoas)
 
-        {{-- @if (old('create'))
+        @if (old('create') && old('tipo_pessoa') === 'F')
             <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <i class="fas fa-check-circle"></i> Entidade <strong>{{old('entidadeNome')}}</strong> cadastrada com sucesso!
+                <i class="fas fa-check-circle"></i> Pessoa Física <strong>{{old('nome_pessoal')}}</strong> cadastrada com sucesso!
             </div>
         @endif
 
-        @if (old('edit'))
+        @if (old('edit') && old('tipo_pessoa') === 'F')
             <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <i class="fas fa-check-circle"></i> Entidade <strong>{{old('entidadeNome')}}</strong> editada com sucesso!
+                <i class="fas fa-check-circle"></i> Pessoa Física <strong>{{old('nome_pessoal')}}</strong> editada com sucesso!
             </div>
-        @endif --}}
+        @endif
+
+        @if (old('create') && old('tipo_pessoa') === 'J')
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <i class="fas fa-check-circle"></i> Pessoa Jurídica <strong>{{old('razao_social')}}</strong> cadastrada com sucesso!
+            </div>
+        @endif
+
+        @if (old('edit') && old('tipo_pessoa') === 'J')
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <i class="fas fa-check-circle"></i> Pessoa Jurídica <strong>{{old('razao_social')}}</strong> editada com sucesso!
+            </div>
+        @endif
 
         <table class="table table-hover">
             <thead class="thead-light">

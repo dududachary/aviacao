@@ -46,7 +46,10 @@
                             {{ Request::is('admin/pessoas/index') ? 'show' : '' }}
                             {{ Request::is('admin/pessoas/type') ? 'show' : '' }}
                             {{ Request::is('admin/pessoas/create/F') ? 'show' : '' }}
-                            {{ Request::is('admin/pessoas/create/J') ? 'show' : '' }}" 
+                            {{ Request::is('admin/pessoas/create/J') ? 'show' : '' }}
+                            @isset($lista_pessoa->id)
+                                {{ Request::is('admin/pessoas/edit/'.$lista_pessoa->id) ? 'show' : '' }}
+                            @endisset" 
                             id="collapseCadastros">
 
                             <div class="list-group list-group-flush">
@@ -66,6 +69,9 @@
                                    {{ Request::is('admin/pessoas/type') ? 'active' : '' }}
                                    {{ Request::is('admin/pessoas/create/F') ? 'active' : '' }}
                                    {{ Request::is('admin/pessoas/create/J') ? 'active' : '' }}
+                                   @isset($lista_pessoa->id)
+                                   {{ Request::is('admin/pessoas/edit/'.$lista_pessoa->id) ? 'active' : '' }}
+                                    @endisset
                                    ">
                                     - Pessoas
                                 </a>

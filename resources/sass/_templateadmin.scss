@@ -82,6 +82,12 @@
         margin-bottom: 0px !important;
         list-style-type: none !important;
     }
+
+    .obrigatorio::after {
+        content: ' (Obrigatório)';
+        color: $cor-secundaria;
+        font-size: 0.7rem;
+    }
     
     @media (min-width: 768px) {
         #sidebar-wrapper {

@@ -6175,6 +6175,12 @@ readers do not read off random characters that represent icons */
   list-style-type: none !important;
 }
 
+#template-admin .obrigatorio::after {
+  content: " (Obrigat\F3rio)";
+  color: #2E516DCC;
+  font-size: 0.7rem;
+}
+
 @media (min-width: 768px) {
   #template-admin #sidebar-wrapper {
     margin-left: 0;

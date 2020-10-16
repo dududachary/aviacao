@@ -29,6 +29,11 @@
         <div class="form-group">
             <div class="form-row">
                 <div class="col-12">
+
+                    @error('nome')
+                        <i class="fas fa-exclamation-circle text-danger"></i>
+                    @enderror
+
                     <label for="entidadeNome">Nome</label>
                         <input id="entidadeNome"
                             name="entidadeNome"

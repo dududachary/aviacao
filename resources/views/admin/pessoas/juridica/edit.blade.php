@@ -24,7 +24,7 @@
     @endif --}}
 
     <form action="{{ action('Admin\PessoasController@update', $lista_pessoa->id) }}" method="POST">
-        <input type="hidden" name="create" value="edit">
+        <input type="hidden" name="edit" value="edit">
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
         <input type="hidden" name="tipo_pessoa" value="J">
     
@@ -152,34 +152,35 @@
                             <select id="estado" 
                                 name="estado"
                                 class="form-control">
-                                <option value="{{ $lista_pessoa->estado }}">{{ $lista_pessoa->estado }}</option>
-                                <option value="AC">AC - Acre</option>
-                                <option value="AL">AL - Alagoas</option>
-                                <option value="AP">AP - Amapá</option>
-                                <option value="AM">AM - Amazonas</option>
-                                <option value="BA">BA - Bahia</option>
-                                <option value="CE">CE - Ceará</option>
-                                <option value="DF">DF - Distrito Federal</option>
-                                <option value="ES">ES - Espírito Santo</option>
-                                <option value="GO">GO - Goiás</option>
-                                <option value="MA">MA - Maranhão</option>
-                                <option value="MT">MT - Mato Grosso</option>
-                                <option value="MS">MS - Mato Grosso do Sul</option>
-                                <option value="MG">MG - Minas Gerais</option>
-                                <option value="PA">PA - Pará</option>
-                                <option value="PB">PB - Paraíba</option>
-                                <option value="PR">PR - Paraná</option>
-                                <option value="PE">PE - Pernambuco</option>
-                                <option value="PI">PI - Piauí</option>
-                                <option value="RJ">RJ - Rio de Janeiro</option>
-                                <option value="RN">RN - Rio Grande do Norte</option>
-                                <option value="RS">RS - Rio Grande do Sul</option>
-                                <option value="RO">RO - Rondônia</option>
-                                <option value="RR">RR - Roraima</option>
-                                <option value="SC">SC - Santa Catarina</option>
-                                <option value="SP">SP - São Paulo</option>
-                                <option value="SE">SE - Sergipe</option>
-                                <option value="TO">TO - Tocantins</option>
+                                <option value="{{ $lista_pessoa->estado }}" class="bg-info">{{ $lista_pessoa->estado }}</option>
+                                <option value="Não Informado">Não Informado</option>
+                                <option value="AC - Acre">AC - Acre</option>
+                                <option value="AL - Alagoas">AL - Alagoas</option>
+                                <option value="AP - Amapá">AP - Amapá</option>
+                                <option value="AM - Amazonas">AM - Amazonas</option>
+                                <option value="BA - Bahia">BA - Bahia</option>
+                                <option value="CE - Ceará">CE - Ceará</option>
+                                <option value="DF - Distrito Federal">DF - Distrito Federal</option>
+                                <option value="ES - Espírito Santo">ES - Espírito Santo</option>
+                                <option value="GO - Goiás">GO - Goiás</option>
+                                <option value="MA - Maranhão">MA - Maranhão</option>
+                                <option value="MT - Mato Grosso">MT - Mato Grosso</option>
+                                <option value="MS - Mato Grosso do Sul">MS - Mato Grosso do Sul</option>
+                                <option value="MG - Minas Gerais">MG - Minas Gerais</option>
+                                <option value="PA - Pará">PA - Pará</option>
+                                <option value="PB - Paraíba">PB - Paraíba</option>
+                                <option value="PR - Paraná">PR - Paraná</option>
+                                <option value="PE - Pernambuco">PE - Pernambuco</option>
+                                <option value="PI - Piauí">PI - Piauí</option>
+                                <option value="RJ - Rio de Janeiro">RJ - Rio de Janeiro</option>
+                                <option value="RN - Rio Grande do Norte">RN - Rio Grande do Norte</option>
+                                <option value="RS - Rio Grande do Sul">RS - Rio Grande do Sul</option>
+                                <option value="RO - Rondônia">RO - Rondônia</option>
+                                <option value="RR - Roraima">RR - Roraima</option>
+                                <option value="SC - Santa Catarina">SC - Santa Catarina</option>
+                                <option value="SP - São Paulo">SP - São Paulo</option>
+                                <option value="SE - Sergipe">SE - Sergipe</option>
+                                <option value="TO - Tocantins">TO - Tocantins</option>
                             </select>                             
                         </div>
                         <div class="col-2">
@@ -247,7 +248,7 @@
                             <select id="relacionamento" 
                                 name="relacionamento"
                                 class="form-control">
-                                <option value="{{ $lista_pessoa->relacionamento }}">{{ $lista_pessoa->relacionamento }}</option>
+                                <option value="{{ $lista_pessoa->relacionamento }}" class="bg-info">{{ $lista_pessoa->relacionamento }}</option>
                                 <option value="Proposta de Sociedade">Proposta de Sociedade</option>
                                 <option value="Sócio Inativo">Sócio Inativo</option>
                                 <option value="Sócio Ativo">Sócio Ativo</option>
@@ -268,8 +269,8 @@
                             <select id="classe_cma" 
                                 name="classe_cma"
                                 class="form-control">
-                                <option value="{{ $lista_pessoa->classe_cma }}">{{ $lista_pessoa->classe_cma }}</option>
-                                <option value="N/A">Não Informado</option>
+                                <option value="{{ $lista_pessoa->classe_cma }}" class="bg-info">{{ $lista_pessoa->classe_cma }}</option>
+                                <option value="Não Informado">Não Informado</option>
                                 <option value="1ª Classe">1ª Classe</option>
                                 <option value="2ª Classe">2ª Classe</option>
                                 <option value="3ª Classe">3ª Classe</option>
@@ -308,12 +309,12 @@
                             <select id="id_entidade" 
                                 name="id_entidade"
                                 class="form-control">
-                                <option value="{{ $lista_pessoa->id_entidade }}">{{ $lista_pessoa->id_entidade }}</option>
+                                <option value="{{ $lista_pessoa->id_entidade }}" class="bg-info">{{ $entidade_pessoa->nome }}</option>
                                 <option value="">Não Informado</option>
     
-                                {{-- @foreach ($entidades_select as $entidade)
+                                @foreach ($entidades_select as $entidade)
                                     <option value="{{$entidade->id}}">{{$entidade->nome}}</option>
-                                @endforeach --}}
+                                @endforeach
     
                             </select>                             
                         </div>
