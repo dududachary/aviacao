@@ -26,7 +26,7 @@ class CreatePessoasTable extends Migration
             $table->string('sinais_particulares', 250)->nullable();
             $table->string('sexo', 50)->nullable();
             $table->string('escolaridade', 150)->nullable();
-            $table->string('tp_sangue', 5)->nullable();
+            $table->string('tp_sangue', 50)->nullable();
             $table->string('cpf')->nullable();
             $table->string('identidade')->nullable();
             $table->string('orgao_expeditor', 25)->nullable();
@@ -36,7 +36,7 @@ class CreatePessoasTable extends Migration
             $table->string('nome_fantasia', 200)->nullable();
             $table->string('razao_social', 200)->nullable();
             $table->string('cnpj')->nullable();
-            $table->string('inscrição_estadual')->nullable();
+            $table->string('inscricao_estadual')->nullable();
             $table->string('ramo_atividade', 250)->nullable();
             
             $table->string('logradouro', 250)->nullable();
@@ -45,7 +45,7 @@ class CreatePessoasTable extends Migration
             $table->string('complemento', 250)->nullable();
             $table->string('cidade', 250)->nullable();
             $table->string('estado', 50)->nullable();
-            $table->integer('cep')->nullable();
+            $table->string('cep')->nullable();
 
             $table->string('email', 250)->nullable();
             $table->string('fone_residencial')->nullable();
