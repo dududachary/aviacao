@@ -40,7 +40,7 @@ Route::group([
 
     Route::get('/pessoas/index', 'PessoasController@index');
     Route::get('/pessoas/type', 'PessoasController@type');
-    Route::get('/pessoas/create/{type}', 'PessoasController@create');
+    Route::post('/pessoas/findCpfCnpj', 'PessoasController@findCpfCnpj');
     Route::get('/pessoas/create/{type}', 'PessoasController@create');
     Route::post('/pessoas/store', 'PessoasController@store');
     Route::get('/pessoas/edit/{id}', 'PessoasController@edit');

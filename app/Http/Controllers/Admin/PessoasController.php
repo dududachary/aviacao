@@ -23,25 +23,115 @@ class PessoasController extends Controller
         return view('admin.pessoas.index')->with('listar_pessoas', $listar_pessoas);
     }
 
+    public function findCpfCnpj()
+    {
+        $tipo_pessoa = Request::input('tipo_pessoa');
+        $cpf = Request::input('cpf');
+        $cnpj = Request::input('cnpj');
+
+        $validator_cpf = Validator::make(
+            [
+                'cpf'        => $cpf
+            ],
+            [
+                'cpf'                 => 'required|numeric|digits:11'
+            ],
+            [
+                'required' => 'É obrigatório informar o  ":attribute" para continuar.',
+                'numeric'  => 'O ":attribute" deve conter somente números',
+                'digits'   => 'O ":attribute" deve ter :digits dígitos'
+            ]
+        );
+
+        if ($validator_cpf->fails() && $tipo_pessoa === "F") {
+
+            return redirect()->action('Admin\PessoasController@type')
+                ->withErrors($validator_cpf)
+                ->withInput();
+
+        }
+
+        $validator_cnpj = Validator::make(
+            [
+                'cnpj'        => $cnpj
+            ],
+            [
+                'cnpj'        => 'required|numeric||digits:14'
+            ],
+            [
+                'required' => 'É obrigatório informar o  ":attribute" para continuar.',
+                'numeric'  => 'O ":attribute" deve conter somente números',
+                'digits'   => 'O ":attribute" deve ter :digits dígitos'
+            ]
+        );
+
+        if ($validator_cnpj->fails() && $tipo_pessoa === "J") {
+
+            return redirect()->action('Admin\PessoasController@type')
+                ->withErrors($validator_cnpj)
+                ->withInput();
+
+        }
+               
+        if ($tipo_pessoa === "F") {            
+
+            $lista_pessoa = Pessoa::where('cpf', $cpf)
+                ->get();
+
+            if ($lista_pessoa->first()) {
+
+                return redirect()->action('Admin\PessoasController@edit', $lista_pessoa[0]->id);
+                
+            } else {
+
+                return redirect()->action('Admin\PessoasController@create', $tipo_pessoa)
+                    ->withInput();
+            }
+            
+        }
+        
+        if ($tipo_pessoa === "J") {
+            
+            $lista_pessoa = Pessoa::where('cnpj', $cnpj)
+                ->get();
+
+            if ($lista_pessoa->first()) {
+
+                return redirect()->action('Admin\PessoasController@edit', $lista_pessoa[0]->id);
+            
+            } else {
+
+                return redirect()->action('Admin\PessoasController@create', $tipo_pessoa)
+                    ->withInput();
+            }
+
+        }
+
+    }
+
     public function type()
     {
         return view('admin.pessoas.type');
     }
 
 
-    public function create($type)
+    public function create($type, $nr_doc = null)
     {
         $entidades_select = Entidade::all();
 
         if ($type === "F") {
 
-            return view('admin.pessoas.fisica.create')->with('entidades_select', $entidades_select);;
+            return view('admin.pessoas.fisica.create')
+                ->with('entidades_select', $entidades_select)
+                ->with('nr_doc', $nr_doc);
 
         }
 
         if ($type === "J") {
 
-            return view('admin.pessoas.juridica.create')->with('entidades_select', $entidades_select);;
+            return view('admin.pessoas.juridica.create')
+                ->with('entidades_select', $entidades_select)
+                ->with('nr_doc', $nr_doc);
 
         }
     }

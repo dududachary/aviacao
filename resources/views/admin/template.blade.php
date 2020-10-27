@@ -163,7 +163,7 @@
                 <!-- Page Content -->
                 <div id="page-content-wrapper">
                     
-                    <nav class="navbar navbar-expand-lg navbar-light bg-primario nav-bx-shadow">
+                    <nav id="nav-header" class="navbar navbar-expand-lg navbar-light bg-primario nav-bx-shadow">
                         <i class="btn btn-secondary" id="menu-toggle">
                             <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i>
                         </i>

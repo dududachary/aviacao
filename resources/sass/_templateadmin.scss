@@ -62,14 +62,21 @@
         background-color: $cor-secundaria !important;
     }
 
-    .nav-item a{
+    #sidebar-wrapper .nav-item a{
         color: white !important;
         &:hover {
             background-color: $cor-primaria;
         }
     }
 
-    .active {
+    #nav-header .nav-item a{
+        color: white !important;
+        &:hover {
+            background-color: $cor-primaria;
+        }
+    }
+
+    #sidebar-wrapper .active {
         background-color: $cor-primaria !important;
     }
 

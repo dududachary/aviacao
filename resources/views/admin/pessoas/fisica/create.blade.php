@@ -217,7 +217,7 @@
                                 name="cpf"
                                 type="text" class="form-control" 
                                 placeholder="Somente números..."
-                                value="{{old('cpf')}}"
+                                value="{{ old('cpf')}}"
                             >                                    
                     </div>
                     <div class="col-2">

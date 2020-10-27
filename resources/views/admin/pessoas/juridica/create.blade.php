@@ -79,7 +79,7 @@
                                 name="cnpj"
                                 type="text" class="form-control" 
                                 placeholder="Informe o CNPJ aqui..."
-                                value="{{old('cnpj')}}"
+                                value="{{ old('cnpj') }}"
                             >                                    
                     </div>
                     <div class="col-4">

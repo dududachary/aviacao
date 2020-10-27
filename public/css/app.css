@@ -6153,15 +6153,23 @@ readers do not read off random characters that represent icons */
   background-color: #2E516DCC !important;
 }
 
-#template-admin .nav-item a {
+#template-admin #sidebar-wrapper .nav-item a {
   color: white !important;
 }
 
-#template-admin .nav-item a:hover {
+#template-admin #sidebar-wrapper .nav-item a:hover {
   background-color: #2E516DFF;
 }
 
-#template-admin .active {
+#template-admin #nav-header .nav-item a {
+  color: white !important;
+}
+
+#template-admin #nav-header .nav-item a:hover {
+  background-color: #2E516DFF;
+}
+
+#template-admin #sidebar-wrapper .active {
   background-color: #2E516DFF !important;
 }
 
