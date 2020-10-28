@@ -47,7 +47,13 @@ Route::group([
     Route::post('/pessoas/update/{id}', 'PessoasController@update');
     Route::get('/pessoas/destroy/{id}', 'PessoasController@destroy');
 
-    Route::get('/usuarios', 'UsuariosController@index');
+    Route::get('/usuarios/index', 'UsuariosController@index');
+    Route::get('/usuarios/create', 'UsuariosController@create');
+    Route::post('/usuarios/store', 'UsuariosController@store');
+    Route::get('/usuarios/edit/{id}', 'UsuariosController@edit');
+    Route::post('/usuarios/update/{id}', 'UsuariosController@update');
+    Route::get('/usuarios/destroy/{id}', 'UsuariosController@destroy');
+
     Route::get('/noticias', 'NoticiasController@index');
     Route::get('/agendaeventos', 'AgendaEventosController@index');
     Route::get('/parceiros', 'ParceirosController@index');

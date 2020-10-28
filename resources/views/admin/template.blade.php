@@ -43,6 +43,8 @@
                                 {{ Request::is('admin/entidades/edit/'.$lista_entidade->id) ? 'show' : '' }}
                             @endisset
                             {{ Request::is('admin/usuarios') ? 'show' : '' }} 
+                            {{ Request::is('admin/usuarios/index') ? 'show' : '' }} 
+                            {{ Request::is('admin/usuarios/create') ? 'show' : '' }} 
                             {{ Request::is('admin/pessoas/index') ? 'show' : '' }}
                             {{ Request::is('admin/pessoas/type') ? 'show' : '' }}
                             {{ Request::is('admin/pessoas/create/F') ? 'show' : '' }}
@@ -75,9 +77,11 @@
                                    ">
                                     - Pessoas
                                 </a>
-                                <a href="{{ url('admin/usuarios') }}" 
+                                <a href="{{ url('admin/usuarios/index') }}" 
                                    class="list-group-item list-group-item-action bg-light
-                                   {{ Request::is('admin/usuarios') ? 'active' : '' }}">
+                                   {{ Request::is('admin/usuarios') ? 'active' : '' }}
+                                   {{ Request::is('admin/usuarios/index') ? 'active' : '' }}
+                                   {{ Request::is('admin/usuarios/create') ? 'active' : '' }}">
                                     - Usuários
                                 </a>
                             </div>
