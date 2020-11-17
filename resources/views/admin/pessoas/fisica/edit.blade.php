@@ -221,7 +221,8 @@
                                 <input id="cpf"
                                     name="cpf"
                                     type="text" class="form-control" 
-                                    placeholder="Informe o CPF aqui..."
+                                    class="form-control-plaintext"
+                                    readonly
                                     value="{{ old('cpf') }} {{ $lista_pessoa->cpf }}"
                                 >                                    
                         </div>

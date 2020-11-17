@@ -5,7 +5,7 @@
 @endsection
 
 @section('botao')
-    <a href="{{ url('admin/usuarios/create') }}" 
+    <a href="{{ action('Admin\UsuariosController@select_pessoa') }}" 
         class="btn btn-danger btn-sm btn-add float-right"> 
         <i class="fas fa-plus"></i> Adicionar Usuário
     </a>

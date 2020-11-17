@@ -97,7 +97,9 @@
 
 
         <section id="conteudo">
-          @yield('conteudo')
+            <div class="container">
+                @yield('conteudo')
+            </div>
         </section>
 
 

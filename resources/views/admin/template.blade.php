@@ -195,7 +195,7 @@
                                             <i class="fas fa-address-card"></i> Meus Dados
                                         </a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="">
                                             <i class="fas fa-sign-out-alt"></i> Sair
                                         </a>
                                     </div>

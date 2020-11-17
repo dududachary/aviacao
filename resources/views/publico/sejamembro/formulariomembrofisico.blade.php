@@ -1,36 +1,32 @@
-@extends('admin.template')
-
-@section('titulo')
-    <span>Cadastro de Pessoa Física</span>   
-@endsection
-
-@section('botao')
-
-@endsection
+@extends('publico.template')
 
 @section('conteudo')
 
-    @if ( count($errors) > 0)
-        <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-
-            <ul class="errors">
-                @foreach ($errors->all() as $error)
+    <div class="p-4">
+        
+        @if ( count($errors) > 0)
+            <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                
+                <ul class="errors">
+                    @foreach ($errors->all() as $error)
                     <li><i class="fas fa-exclamation-circle text-danger"></i> - {{ $error }}</li>
-                @endforeach
-            </ul>
+                    @endforeach
+                </ul>
+                
+            </div>
+        @endif
 
-        </div>
-    @endif
-
-    <form action="{{ action('Admin\PessoasController@store') }}" method="POST">
+        <form action="{{ action('Publico\SejaMembroController@store') }}" method="POST">
         <input type="hidden" name="create" value="create">
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
         <input type="hidden" name="tipo_pessoa" value="F">
+        <input type="hidden" name="id_entidade" id="id_entidade" value="1">
+        <input type="hidden" name="relacionamento" id="relacionamento" value="Proposta de Sociedade (Site)">
 
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fas fa-user-edit"></i> <b>Informações Pessoais</b>
+                <i class="fas fa-user-edit"></i> <b>Informações Pessoais (Pessoa Física)</b>
             </div>
             <div class="card-body">
                 <div class="form-group">
@@ -218,7 +214,7 @@
                                     type="text" class="form-control" 
                                     class="form-control-plaintext"
                                     readonly
-                                    value="{{ old('cpf')}}"
+                                    value="{{ isset($documento) ? $documento : old('cpf')}}"
                                 >                                    
                         </div>
                         <div class="col-2">
@@ -489,28 +485,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col-3">
-
-                            @error('relacionamento')
-                                <i class="fas fa-exclamation-circle text-danger"></i>
-                            @enderror
-
-                            <label for="relacionamento" class="obrigatorio">Relacionamento</label>
-                            <select id="relacionamento" 
-                                name="relacionamento"
-                                class="form-control">
-
-                                @if (old('relacionamento'))
-                                    <option value="{{old('relacionamento')}}">{{old('relacionamento')}}</option>
-                                @endif
-
-                                <option value="Proposta de Sociedade">Proposta de Sociedade</option>
-                                <option value="Sócio Inativo">Sócio Inativo</option>
-                                <option value="Sócio Ativo">Sócio Ativo</option>
-                                <option value="Parceiro">Parceiro</option>
-                            </select>                             
-                        </div>
-                        <div class="col-3">
+                        <div class="col-4">
 
                             @error('codigo_anac')
                                 <i class="fas fa-exclamation-circle text-danger"></i>
@@ -524,7 +499,7 @@
                                     value="{{old('codigo_anac')}}"
                                 >                                    
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
 
                             @error('classe_cma')
                                 <i class="fas fa-exclamation-circle text-danger"></i>
@@ -547,7 +522,7 @@
                                 <option value="5ª Classe">5ª Classe</option>
                             </select>                             
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <label for="validade_cma">Validade do CMA</label>
                                 <input id="validade_cma"
                                     name="validade_cma"
@@ -576,36 +551,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-3">
-                            
-                            @error('id_entidade')
-                                <i class="fas fa-exclamation-circle text-danger"></i>
-                            @enderror
-
-                            <label for="id_entidade" class="obrigatorio">Entidade Reponsável</label>
-                            <select id="id_entidade" 
-                                name="id_entidade"
-                                class="form-control">
-                                <option value="">Não Informado</option>
-
-                                @foreach ($entidades_select as $entidade)
-                                    <option value="{{$entidade->id}}">{{$entidade->nome}}</option>
-                                @endforeach
-
-                            </select>                             
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
-        <a href="{{ url('admin/pessoas/index') }}" type="button" class="btn btn-danger btn-sm">
+        <a href="{{ route('inicial') }}" type="button" class="btn btn-danger btn-sm">
             <i class="fas fa-sign-out-alt"></i> Fechar
         </a>
         <button type="submit" class="btn btn-primary btn-sm">
-            <i class="fas fa-save"></i> Salvar
+            <i class="fas fa-share"></i> Enviar Formulário de Proposta
         </button>
-    </form>    
+        </form>
+    </div>
+
 @endsection

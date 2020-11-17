@@ -77,8 +77,9 @@
                             <label for="cnpj">CNPJ</label>
                                 <input id="cnpj"
                                     name="cnpj"
-                                    type="text" class="form-control" 
-                                    placeholder="Informe o CNPJ aqui..."
+                                    type="text" class="form-control"
+                                    class="form-control-plaintext"
+                                    readonly
                                     value="{{ old('cnpj')}} {{ $lista_pessoa->cnpj }}"
                                 >                                    
                         </div>

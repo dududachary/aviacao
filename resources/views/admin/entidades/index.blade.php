@@ -39,14 +39,18 @@
                 @forelse ($listar_entidades as $entidade)
                     <tr>
                         <td>{{ $entidade->nome }}</td>
+
                         <td class="text-center">
-                            <a class="btn btn-sm btn-primary" href="{{ action('Admin\EntidadesController@edit', $entidade->id) }}">
-                                Alterar
-                            </a>
-                             <a class="btn btn-sm btn-danger href="#" onclick="destroy('{{ action('Admin\EntidadesController@destroy', $entidade->id) }}');">
-                                Apagar    
-                             </a>                            
+                            @if ( $entidade->id != 1)
+                                <a class="btn btn-sm btn-primary" href="{{ action('Admin\EntidadesController@edit', $entidade->id) }}">
+                                    Alterar
+                                </a>
+                                <a class="btn btn-sm btn-danger href="#" onclick="destroy('{{ action('Admin\EntidadesController@destroy', $entidade->id) }}');">
+                                    Apagar    
+                                </a>                            
+                            @endif
                         </td>
+
                     </tr>
                 @empty
                     <div class="alert alert-warning text-center" role="alert">

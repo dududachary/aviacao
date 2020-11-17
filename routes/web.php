@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+Auth::routes();
+
 // Rotas Públicas
 Route::group([
     'middleware' => [],
@@ -16,19 +18,31 @@ Route::group([
     Route::get('/legislacao', 'LegislacaoController@index')->name('legislacao');
     Route::get('/parceiros', 'ParceirosController@index')->name('parceiros');
     Route::get('/uteis', 'LinksUteisController@index')->name('uteis');
+
     Route::get('/sejamembro', 'SejaMembroController@index')->name('sejamembro');
+    Route::get('/sejamembro/buscadocumento', 'SejaMembroController@buscaDocumento')->name('sejamembro.buscadocumento');
+    Route::post('/sejamembro/formularioMembro', 'SejaMembroController@formularioMembro')->name('sejamembro.formulariomembro');
+    Route::get('/sejamembro/formularioMembro/createMembroFisico', 'SejaMembroController@createMembroFisico');
+    Route::get('/sejamembro/formularioMembro/createMembroJuridico', 'SejaMembroController@createMembroJuridico');
+    Route::post('/sejamembro/formularioMembro/store', 'SejaMembroController@store');
+    Route::get('/sejamembro/envioconfirmado', 'SejaMembroController@envioConfirmado');
+
     Route::get('/contato', 'ContatoController@index')->name('contato');
+    Route::get('/login', 'LoginController@index')->name('login');
+    Route::post('/login/verificacao', 'LoginController@login')->name('login.verificacao');
+    Route::post('/logout', 'LoginController@logout')->name('logout');
 });
 
 
 // Rotas Admin
 Route::group([
+    // 'middleware' => ['auth'],
     'middleware' => [],
     'prefix'     => 'admin',
     'namespace'  => 'Admin'
 ], function () {
     Route::get('/', 'MeusDadosController@index');
-    Route::get('/meusdados', 'MeusDadosController@index');
+    Route::get('/meusdados', 'MeusDadosController@index')->name('admin.meusdados');
 
     Route::get('/entidades/index', 'EntidadesController@index');    
     Route::get('/entidades/create', 'EntidadesController@create');
@@ -45,10 +59,13 @@ Route::group([
     Route::post('/pessoas/store', 'PessoasController@store');
     Route::get('/pessoas/edit/{id}', 'PessoasController@edit');
     Route::post('/pessoas/update/{id}', 'PessoasController@update');
+    Route::get('/pessoas/liberarCadastro/{id}', 'PessoasController@liberarCadastro');
+    Route::get('/pessoas/bloquearCadastro/{id}', 'PessoasController@bloquearCadastro');
     Route::get('/pessoas/destroy/{id}', 'PessoasController@destroy');
 
     Route::get('/usuarios/index', 'UsuariosController@index');
-    Route::get('/usuarios/create', 'UsuariosController@create');
+    Route::get('/usuarios/pessoa/', 'UsuariosController@select_pessoa');
+    Route::get('/usuarios/create/{id_pessoa}', 'UsuariosController@create');
     Route::post('/usuarios/store', 'UsuariosController@store');
     Route::get('/usuarios/edit/{id}', 'UsuariosController@edit');
     Route::post('/usuarios/update/{id}', 'UsuariosController@update');
@@ -64,6 +81,5 @@ Route::group([
 });
 
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

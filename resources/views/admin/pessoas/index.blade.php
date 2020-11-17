@@ -47,7 +47,8 @@
             <thead class="thead-light">
                 <tr>
                     <th width="10%">ID</th>
-                    <th width="70%">Nome</th>
+                    <th width="55%">Nome</th>
+                    <th width="15%">Situação Cadastral</th>
                     <th width="20%%" class="text-center">Ação</th>
                 </tr>
             </thead>
@@ -57,6 +58,21 @@
                     <tr>
                         <td>{{ $pessoa->id }}</td>
                         <td>{{ $pessoa->nome_pessoal }} {{ $pessoa->nome_fantasia }}</td>
+
+                        <td class="text-center">
+                            @if ( $pessoa->situacao === "Bloqueado")
+                                <a class="btn btn-sm btn-primary" href="{{ action('Admin\PessoasController@liberarCadastro', $pessoa->id) }}">
+                                    Liberar
+                                </a> 
+                            @endif
+
+                            @if ( $pessoa->situacao === "Liberado")
+                                <a class="btn btn-sm btn-danger" href="{{ action('Admin\PessoasController@bloquearCadastro', $pessoa->id) }}">
+                                    Bloquear
+                                </a> 
+                            @endif
+                        </td>
+
                         <td class="text-center">
 
                             <a class="btn btn-sm btn-primary" href="{{ action('Admin\PessoasController@edit', $pessoa->id) }}">

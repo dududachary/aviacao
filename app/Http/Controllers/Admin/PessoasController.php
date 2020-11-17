@@ -31,10 +31,10 @@ class PessoasController extends Controller
 
         $validator_cpf = Validator::make(
             [
-                'cpf'        => $cpf
+                'cpf' => $cpf
             ],
             [
-                'cpf'                 => 'required|numeric|digits:11'
+                'cpf' => 'required|numeric|digits:11'
             ],
             [
                 'required' => 'É obrigatório informar o  ":attribute" para continuar.',
@@ -186,6 +186,7 @@ class PessoasController extends Controller
         $validade_cma = Request::input('validade_cma');
         $observacoes_pessoa = Request::input('observacoes_pessoa');
         $id_entidade = Request::input('id_entidade');
+        $situacao = 'Bloqueado';
 
         $mensagens_erro = array(
             'required' => 'O campo ":attribute" é obrigatório.',
@@ -379,6 +380,7 @@ class PessoasController extends Controller
         $pessoa->validade_cma = date("Y-m-d", strtotime($validade_cma));
         $pessoa->observacoes_pessoa = $observacoes_pessoa;
         $pessoa->id_entidade = $id_entidade;
+        $pessoa->situacao = $situacao;
 
         $pessoa->save();
 
@@ -667,6 +669,24 @@ class PessoasController extends Controller
         $pessoa->observacoes_pessoa = $observacoes_pessoa;
         $pessoa->id_entidade = $id_entidade;
 
+        $pessoa->save();
+
+        return redirect()->action('Admin\PessoasController@index')->withInput();
+    }
+
+    public function liberarCadastro(Request $request, $id)
+    {
+        $pessoa = Pessoa::find($id);
+        $pessoa->situacao = 'Liberado';
+        $pessoa->save();
+
+        return redirect()->action('Admin\PessoasController@index')->withInput();
+    }
+
+    public function bloquearCadastro(Request $request, $id)
+    {
+        $pessoa = Pessoa::find($id);
+        $pessoa->situacao = 'Bloqueado';
         $pessoa->save();
 
         return redirect()->action('Admin\PessoasController@index')->withInput();

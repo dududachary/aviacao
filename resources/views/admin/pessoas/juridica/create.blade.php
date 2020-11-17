@@ -78,7 +78,8 @@
                             <input id="cnpj"
                                 name="cnpj"
                                 type="text" class="form-control" 
-                                placeholder="Informe o CNPJ aqui..."
+                                class="form-control-plaintext"
+                                readonly
                                 value="{{ old('cnpj') }}"
                             >                                    
                     </div>

@@ -15,7 +15,7 @@ class CreatePessoasTable extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_entidade')->constrained('entidades')->onDelete('cascade');
+            $table->foreignId('id_entidade')->constrained('entidades')->onDelete('restrict');
             $table->string('tipo_pessoa', 1);
 
             $table->string('nome_pessoal', 200)->nullable();
@@ -53,6 +53,7 @@ class CreatePessoasTable extends Migration
             $table->string('fone_celular')->nullable();
 
             $table->string('relacionamento', 50)->nullable();
+            $table->string('situacao', 25)->nullable();
             $table->string('codigo_anac')->nullable();
             $table->string('classe_cma', 50)->nullable();
             $table->date('validade_cma')->nullable();
