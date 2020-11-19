@@ -1,37 +1,32 @@
 @extends('publico.template')
 
 @section('conteudo')
-
     <div class="p-2">
         <form action="{{ action('Publico\SejaMembroController@formularioMembro') }}" method="POST">
             <input type="hidden" name="busca" value="busca">
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
             <div class="form-group">
-                <label for="documento">Digite o seu CPF ou CNPJ</label>
+                <label for="documento">Informe o e-mail cadastrado</label>
                 <div class="input-group">
-                    <input id="documento" 
+                    <input id="documento"
                         name="documento"
                         type="number"
                         class="form-control col-4" 
-                        placeholder="Digite a busca" 
+                        placeholder="Digite o e-mail aqui" 
                         aria-label="Digite a busca..." 
                         aria-describedby="basic-addon2"
                         value=""
                     >
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit">
-                            Próximo <i class="fas fa-arrow-right"></i>
+                            <i class="fas fa-search"></i> Verificar e-mail
                         </button>
                     </div>
                 </div>
             </div>
         </form>
-        <ul>
-            <li>O CPF deve conter 11 números</li>
-            <li>O CNPJ deve conter 14 números</li>
-        </ul>
     </div>
-    
+
     @isset($alerta)
         <div class="alert alert-danger alert-dismissible">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -51,5 +46,4 @@
             </ul>
         </div>
     @endif
-
 @endsection

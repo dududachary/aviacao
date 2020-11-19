@@ -12,6 +12,10 @@ class EntidadesSeeder extends Seeder
     public function run()
     {
         DB::insert('INSERT INTO entidades (nome) VALUES (?)', array(
+            'Público'
+        ));
+
+        DB::insert('INSERT INTO entidades (nome) VALUES (?)', array(
             'Biruta Escola de Aviação Civíl'
         ));
 

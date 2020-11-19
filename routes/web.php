@@ -28,9 +28,12 @@ Route::group([
     Route::get('/sejamembro/envioconfirmado', 'SejaMembroController@envioConfirmado');
 
     Route::get('/contato', 'ContatoController@index')->name('contato');
+
     Route::get('/login', 'LoginController@index')->name('login');
     Route::post('/login/verificacao', 'LoginController@login')->name('login.verificacao');
     Route::post('/logout', 'LoginController@logout')->name('logout');
+
+    Route::get('/acesso/buscarpessoa', 'AcessoController@exibeBuscaPessoa')->name('acesso.buscarpessoa');
 });
 
 
