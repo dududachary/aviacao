@@ -2,15 +2,15 @@
 
 @section('conteudo')
     <div class="p-2">
-        <form action="{{ action('Publico\SejaMembroController@formularioMembro') }}" method="POST">
+        <form action="{{ action('Publico\AcessoController@verificarEmailCadastrado') }}" method="POST">
             <input type="hidden" name="busca" value="busca">
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
             <div class="form-group">
-                <label for="documento">Informe o e-mail cadastrado</label>
+                <label for="email">Informe o e-mail cadastrado</label>
                 <div class="input-group">
-                    <input id="documento"
-                        name="documento"
-                        type="number"
+                    <input id="email"
+                        name="email"
+                        type="text"
                         class="form-control col-4" 
                         placeholder="Digite o e-mail aqui" 
                         aria-label="Digite a busca..." 
@@ -34,16 +34,4 @@
         </div>
     @endisset
 
-    @if ( count($errors) > 0)
-        <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <ul class="errors list-group">
-                @foreach ($errors->all() as $error)
-                    <li style="list-style-type: none">
-                        <i class="fas fa-exclamation-circle text-danger"></i> - {{ $error }}
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 @endsection

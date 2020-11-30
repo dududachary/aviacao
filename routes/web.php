@@ -34,6 +34,9 @@ Route::group([
     Route::post('/logout', 'LoginController@logout')->name('logout');
 
     Route::get('/acesso/buscarpessoa', 'AcessoController@exibeBuscaPessoa')->name('acesso.buscarpessoa');
+    Route::post('/acesso/verificarEmailCadastrado', 'AcessoController@verificarEmailCadastrado')->name('acesso.verificaremailcadastrado');
+    Route::get('/acesso/formularioCadastraUsuario/{idPessoa}', 'AcessoController@formularioCadastraUsuario')->name('acesso.formulariocadastrausuario');
+    Route::post('/acesso/criaUsuario', 'AcessoController@storeUsuario');
 });
 
 
@@ -74,10 +77,12 @@ Route::group([
     Route::post('/usuarios/update/{id}', 'UsuariosController@update');
     Route::get('/usuarios/destroy/{id}', 'UsuariosController@destroy');
 
+    Route::get('/linksuteis', 'LinksUteisController@index');
+    Route::get('/linksuteis/create', 'LinksUteisController@create');
+
     Route::get('/noticias', 'NoticiasController@index');
     Route::get('/agendaeventos', 'AgendaEventosController@index');
     Route::get('/parceiros', 'ParceirosController@index');
-    Route::get('/linksuteis', 'LinksUteisController@index');
     Route::get('/materias', 'MateriasController@index');
     Route::get('/questoes', 'QuestoesController@index');
     Route::get('/aplicaprova', 'AplicaProvaController@index');

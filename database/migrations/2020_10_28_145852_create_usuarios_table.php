@@ -15,7 +15,7 @@ class CreateUsuariosTable extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pessoa')->constrained('pessoas')->onDelete('restrict');
+            // $table->foreignId('id_pessoa')->constrained('pessoas')->onDelete('restrict');
             $table->string('username')->unique();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();

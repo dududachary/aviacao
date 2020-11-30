@@ -15,16 +15,5 @@ class EntidadesSeeder extends Seeder
             'Público'
         ));
 
-        DB::insert('INSERT INTO entidades (nome) VALUES (?)', array(
-            'Biruta Escola de Aviação Civíl'
-        ));
-
-        DB::insert('INSERT INTO entidades (nome) VALUES (?)', array(
-            'Noroeste Escola de Aviação'
-        ));
-
-        DB::insert('INSERT INTO entidades (nome) VALUES (?)', array(
-            'Aeroclube de Ijuí'
-        ));
     }
 }

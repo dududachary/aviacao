@@ -47,7 +47,7 @@ class CreatePessoasTable extends Migration
             $table->string('estado', 50)->nullable();
             $table->string('cep')->nullable();
 
-            $table->string('email', 250)->nullable();
+            $table->string('email', 250)->nullable()->unique();
             $table->string('fone_residencial')->nullable();
             $table->string('fone_comercial')->nullable();
             $table->string('fone_celular')->nullable();
