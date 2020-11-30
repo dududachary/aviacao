@@ -4,12 +4,19 @@ namespace App\Http\Controllers\Publico;
 
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
+use Request;
+
+use Illuminate\Support\Facades\DB;
+
+use App\Link;
 
 class LinksUteisController extends Controller
 {
     public function index()
     {
-        return view('publico.uteis');
+        $listar_links = Link::all()->sortByDesc("id");
+        
+        return view('publico.links.linksuteis')
+            ->with('listar_links', $listar_links);
     }
 }

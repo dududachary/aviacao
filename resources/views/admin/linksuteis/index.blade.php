@@ -12,43 +12,45 @@
 @endsection
 
 @section('conteudo')
-    {{-- @isset($listar_entidades)
+    @isset($listar_links)
 
         @if (old('create'))
             <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <i class="fas fa-check-circle"></i> Entidade <strong>{{old('entidadeNome')}}</strong> cadastrada com sucesso!
+                <i class="fas fa-check-circle"></i> Link <strong>{{old('url')}}</strong> cadastrado com sucesso!
             </div>
         @endif
 
         @if (old('edit'))
             <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <i class="fas fa-check-circle"></i> Entidade <strong>{{old('entidadeNome')}}</strong> editada com sucesso!
+                <i class="fas fa-check-circle"></i> Link <strong>{{old('url')}}</strong> editado com sucesso!
             </div>
         @endif
 
         <table class="table table-hover">
             <thead class="thead-light">
                 <tr>
-                    <th width="85%">Nome da Entidade</th>
+                    <th width="45%">Titulo</th>
+                    <th width="40%">Url</th>
                     <th width="15%" class="text-center">Ação</th>
                 </tr>
             </thead>
             <tbody>
-                @forelse ($listar_entidades as $entidade)
+                @forelse ($listar_links as $link)
                     <tr>
-                        <td>{{ $entidade->nome }}</td>
+                        <td>{{ $link->titulo }}</td>
+                        <td>{{ $link->url }}</td>
 
                         <td class="text-center">
-                            @if ( $entidade->id != 1)
-                                <a class="btn btn-sm btn-primary" href="{{ action('Admin\EntidadesController@edit', $entidade->id) }}">
-                                    Alterar
-                                </a>
-                                <a class="btn btn-sm btn-danger href="#" onclick="destroy('{{ action('Admin\EntidadesController@destroy', $entidade->id) }}');">
-                                    Apagar    
-                                </a>                            
-                            @endif
+
+                            <a class="btn btn-sm btn-primary" href="{{ action('Admin\LinksUteisController@edit', $link->id) }}">
+                                Alterar
+                            </a>
+                            <a class="btn btn-sm btn-danger href="#" onclick="destroy('{{ action('Admin\LinksUteisController@destroy', $link->id) }}');">
+                                Apagar    
+                            </a>    
+
                         </td>
 
                     </tr>
@@ -60,7 +62,7 @@
             </tbody>
         </table>
 
-    @endisset --}}
+    @endisset
 @endsection
 
 <script type="text/javascript">

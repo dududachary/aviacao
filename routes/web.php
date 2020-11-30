@@ -78,7 +78,12 @@ Route::group([
     Route::get('/usuarios/destroy/{id}', 'UsuariosController@destroy');
 
     Route::get('/linksuteis', 'LinksUteisController@index');
+    Route::get('/linksuteis/index', 'LinksUteisController@index');
     Route::get('/linksuteis/create', 'LinksUteisController@create');
+    Route::post('/linksuteis/store', 'LinksUteisController@store');
+    Route::get('/linksuteis/edit/{id}', 'LinksUteisController@edit');
+    Route::post('/linksuteis/update/{id}', 'LinksUteisController@update');
+    Route::get('/linksuteis/destroy/{id}', 'LinksUteisController@destroy');
 
     Route::get('/noticias', 'NoticiasController@index');
     Route::get('/agendaeventos', 'AgendaEventosController@index');
