@@ -1,0 +1,55 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /var/www/aviacao
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git check-ignore -v -z --stdin
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/User.php
+> git ls-files --stage -- /var/www/aviacao/app/User.php
+> git cat-file -s 5765380eb012e4d9e9e551d3090ad2e483b18e56
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/Http/Controllers/Publico/AcessoController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Publico/AcessoController.php
+> git cat-file -s cc278698cc5b2aea74cba88c1e979e73fea63329
+> git check-ignore -v -z --stdin
+> git show --textconv :app/User.php
+> git ls-files --stage -- /var/www/aviacao/app/User.php
+> git cat-file -s 5765380eb012e4d9e9e551d3090ad2e483b18e56
+> git show --textconv :database/migrations/2020_10_07_154919_create_pessoas_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_10_07_154919_create_pessoas_table.php
+> git cat-file -s c978bf8c72a015a80ed58f6c02c11518d66f0345
+> git check-ignore -v -z --stdin
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/aviacao/routes/web.php
+> git cat-file -s 951ad56936df09ebd56dc3c0923278feb33aaf91
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin

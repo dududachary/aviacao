@@ -1,0 +1,4 @@
+[2020-11-30 14:44:55.812] [renderer1] [error] ENOENT: no such file or directory, scandir '/home/eduardo/.vscode/extensions': Error: ENOENT: no such file or directory, scandir '/home/eduardo/.vscode/extensions'
+    at file:///usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:585:690
+    at async Promise.all (index 0)
+    at async E.scanExtensions (file:///usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:585:779)

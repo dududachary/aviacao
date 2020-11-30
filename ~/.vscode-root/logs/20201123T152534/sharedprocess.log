@@ -1,0 +1,4 @@
+[2020-11-23 15:25:40.723] [sharedprocess] [info] main {"machineId":"59c0cba694e06924152c07eab86a9042ceb5a70f66c8612b3003e297e64fc8d8","windowId":2}
+[2020-11-23 15:25:42.859] [sharedprocess] [info] Deleted from disk ms-toolsai.jupyter /home/eduardo/.vscode/extensions/ms-toolsai.jupyter-2020.11.358541065
+[2020-11-23 15:25:42.931] [sharedprocess] [info] Deleted from disk ms-python.python /home/eduardo/.vscode/extensions/ms-python.python-2020.11.367453362
+[2020-11-23 15:26:20.749] [sharedprocess] [info] Starting to clean up unused language packs.

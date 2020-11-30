@@ -1,0 +1,235 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /var/www/aviacao
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Http/Controllers/Publico/AcessoController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Publico/AcessoController.php
+> git cat-file -s cc278698cc5b2aea74cba88c1e979e73fea63329
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :resources/views/publico/acesso/cadastrausuario.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/publico/acesso/cadastrausuario.blade.php
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/aviacao/resources/views/publico/acesso/cadastrausuario.blade.php
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/aviacao/routes/web.php
+> git cat-file -s 951ad56936df09ebd56dc3c0923278feb33aaf91
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/publico/acesso/cadastrausuario.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/publico/acesso/cadastrausuario.blade.php
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :database/migrations/2014_10_12_000000_create_users_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2014_10_12_000000_create_users_table.php
+> git cat-file -s 7e0c95c2f0c6751a573fce32913def6cdefbbfba
+> git show --textconv :app/User.php
+> git ls-files --stage -- /var/www/aviacao/app/User.php
+> git cat-file -s 5765380eb012e4d9e9e551d3090ad2e483b18e56
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :database/migrations/2014_10_12_000000_create_users_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2014_10_12_000000_create_users_table.php
+> git cat-file -s 7e0c95c2f0c6751a573fce32913def6cdefbbfba
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/User.php
+> git ls-files --stage -- /var/www/aviacao/app/User.php
+> git cat-file -s 5765380eb012e4d9e9e551d3090ad2e483b18e56
+> git show --textconv :database/migrations/2014_10_12_000000_create_users_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2014_10_12_000000_create_users_table.php
+> git cat-file -s 7e0c95c2f0c6751a573fce32913def6cdefbbfba
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Http/Controllers/Admin/UsuariosController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/UsuariosController.php
+> git cat-file -s 8e5a566f37616819ca97d6ebe32c17908c75ca7d
+> git show --textconv :app/Http/Controllers/Publico/AcessoController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Publico/AcessoController.php
+> git cat-file -s cc278698cc5b2aea74cba88c1e979e73fea63329
+> git show --textconv :app/Http/Controllers/Admin/UsuariosController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/UsuariosController.php
+> git cat-file -s 8e5a566f37616819ca97d6ebe32c17908c75ca7d
+> git show --textconv :app/Http/Controllers/Publico/AcessoController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Publico/AcessoController.php
+> git cat-file -s cc278698cc5b2aea74cba88c1e979e73fea63329
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/Http/Controllers/Admin/UsuariosController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/UsuariosController.php
+> git cat-file -s 8e5a566f37616819ca97d6ebe32c17908c75ca7d
+> git show --textconv :app/Http/Controllers/Publico/AcessoController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Publico/AcessoController.php
+> git cat-file -s cc278698cc5b2aea74cba88c1e979e73fea63329
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/Http/Controllers/Admin/UsuariosController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/UsuariosController.php
+> git cat-file -s 8e5a566f37616819ca97d6ebe32c17908c75ca7d
+> git show --textconv :app/Http/Controllers/Publico/AcessoController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Publico/AcessoController.php
+> git cat-file -s cc278698cc5b2aea74cba88c1e979e73fea63329
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/aviacao/app/Http/Controllers/Publico/AcessoController.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :database/migrations/2014_10_12_000000_create_users_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2014_10_12_000000_create_users_table.php
+> git cat-file -s 7e0c95c2f0c6751a573fce32913def6cdefbbfba

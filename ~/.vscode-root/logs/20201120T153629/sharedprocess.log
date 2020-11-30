@@ -1,0 +1,15 @@
+[2020-11-20 15:36:32.570] [sharedprocess] [info] main {"machineId":"59c0cba694e06924152c07eab86a9042ceb5a70f66c8612b3003e297e64fc8d8","windowId":2}
+[2020-11-20 15:36:32.618] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/var/www/aviacao/~/.vscode-root/User/snippets'
+[2020-11-20 15:36:34.467] [sharedprocess] [info] Installing extension: ms-python.python
+[2020-11-20 15:36:34.468] [sharedprocess] [info] Installing extension: ms-toolsai.jupyter
+[2020-11-20 15:36:53.545] [sharedprocess] [info] Downloaded extension: ms-python.python undefined
+[2020-11-20 15:36:56.295] [sharedprocess] [info] Downloaded extension: ms-toolsai.jupyter undefined
+[2020-11-20 15:36:57.374] [sharedprocess] [info] Extracted extension to /home/eduardo/.vscode/extensions/.ms-python.python-2020.11.371526539: ms-python.python
+[2020-11-20 15:36:57.374] [sharedprocess] [info] Renamed to /home/eduardo/.vscode/extensions/ms-python.python-2020.11.371526539
+[2020-11-20 15:36:57.376] [sharedprocess] [info] Installation completed. ms-python.python
+[2020-11-20 15:36:57.472] [sharedprocess] [info] Extensions installed successfully: ms-python.python
+[2020-11-20 15:36:57.573] [sharedprocess] [info] Extracted extension to /home/eduardo/.vscode/extensions/.ms-toolsai.jupyter-2020.11.372831992: ms-toolsai.jupyter
+[2020-11-20 15:36:57.573] [sharedprocess] [info] Renamed to /home/eduardo/.vscode/extensions/ms-toolsai.jupyter-2020.11.372831992
+[2020-11-20 15:36:57.574] [sharedprocess] [info] Installation completed. ms-toolsai.jupyter
+[2020-11-20 15:36:57.640] [sharedprocess] [info] Extensions installed successfully: ms-toolsai.jupyter
+[2020-11-20 15:37:12.589] [sharedprocess] [info] Starting to clean up unused language packs.

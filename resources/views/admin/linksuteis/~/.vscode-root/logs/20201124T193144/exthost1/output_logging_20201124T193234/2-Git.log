@@ -1,0 +1,415 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /var/www/aviacao
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/aviacao/routes/web.php
+> git cat-file -s 951ad56936df09ebd56dc3c0923278feb33aaf91
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :resources/views/admin/linksuteis/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/edit.blade.php
+> git show --textconv :resources/views/admin/linksuteis/index.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/index.blade.php
+> git check-ignore -v -z --stdin
+> git show --textconv :resources/views/admin/entidades/index.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/entidades/index.blade.php
+> git cat-file -s 58fc2513939b67980beb55f398fe61e70af525ce
+> git show --textconv :resources/views/admin/linksuteis/index.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/index.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/entidades/create.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/entidades/create.blade.php
+> git cat-file -s 8074bf5dd101fae0bbdabc6d3b942eddf2a4c40e
+> git show --textconv :resources/views/admin/linksuteis/index.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/index.blade.php
+> git show --textconv :resources/views/admin/linksuteis/create.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/create.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/linksuteis/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/edit.blade.php
+> git show --textconv :resources/views/admin/entidades/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/entidades/edit.blade.php
+> git cat-file -s b82917949b697073d3934f375c4763b9d269cdb0
+> git show --textconv :resources/views/admin/linksuteis/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/edit.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/entidades/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/entidades/edit.blade.php
+> git cat-file -s b82917949b697073d3934f375c4763b9d269cdb0
+> git show --textconv :resources/views/admin/linksuteis/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/edit.blade.php
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Http/Controllers/Admin/LinksUteisController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/LinksUteisController.php
+> git cat-file -s 873ba0aed7032b15b2d465361ddb0a3167a646c6
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/aviacao/app/Http/Controllers/Admin/LinksUteisController.php
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/Link.php
+> git ls-files --stage -- /var/www/aviacao/app/Link.php
+> git show --textconv :app/Pessoa.php
+> git ls-files --stage -- /var/www/aviacao/app/Pessoa.php
+> git cat-file -s de55a04a27a613df3be241392e89f35ad2e70ba9
+> git show --textconv :app/Link.php
+> git ls-files --stage -- /var/www/aviacao/app/Link.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git show --textconv :database/migrations/2020_10_28_145852_create_usuarios_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_10_28_145852_create_usuarios_table.php
+> git cat-file -s 0bcdeb36ed4b25d427417e0179565b5c079c9dd5
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git show --textconv :database/migrations/2020_10_28_145852_create_usuarios_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_10_28_145852_create_usuarios_table.php
+> git cat-file -s 0bcdeb36ed4b25d427417e0179565b5c079c9dd5
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :database/migrations/2020_10_28_145852_create_usuarios_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_10_28_145852_create_usuarios_table.php
+> git cat-file -s 0bcdeb36ed4b25d427417e0179565b5c079c9dd5
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/Link.php
+> git ls-files --stage -- /var/www/aviacao/app/Link.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/aviacao/routes/web.php
+> git cat-file -s 951ad56936df09ebd56dc3c0923278feb33aaf91
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/Http/Controllers/Admin/LinksUteisController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/LinksUteisController.php
+> git cat-file -s 873ba0aed7032b15b2d465361ddb0a3167a646c6
+> git show --textconv :resources/views/admin/linksuteis/index.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/index.blade.php
+> git show --textconv :app/Http/Controllers/Admin/LinksUteisController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/LinksUteisController.php
+> git cat-file -s 873ba0aed7032b15b2d465361ddb0a3167a646c6
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/linksuteis/index.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/index.blade.php
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git show --textconv :app/Link.php
+> git ls-files --stage -- /var/www/aviacao/app/Link.php
+> git show --textconv :app/Http/Controllers/Admin/LinksUteisController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/LinksUteisController.php
+> git cat-file -s 873ba0aed7032b15b2d465361ddb0a3167a646c6
+> git show --textconv :app/Link.php
+> git ls-files --stage -- /var/www/aviacao/app/Link.php
+> git show --textconv :app/Http/Controllers/Admin/LinksUteisController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/LinksUteisController.php
+> git cat-file -s 873ba0aed7032b15b2d465361ddb0a3167a646c6
+> git show --textconv :app/Link.php
+> git ls-files --stage -- /var/www/aviacao/app/Link.php
+> git show --textconv :app/Http/Controllers/Admin/LinksUteisController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/LinksUteisController.php
+> git cat-file -s 873ba0aed7032b15b2d465361ddb0a3167a646c6
+> git show --textconv :resources/views/admin/linksuteis/index.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/index.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/linksuteis/create.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/create.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/linksuteis/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/edit.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/linksuteis/index.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/index.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/aviacao/routes/web.php
+> git cat-file -s 951ad56936df09ebd56dc3c0923278feb33aaf91
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/Http/Controllers/Admin/LinksUteisController.php
+> git ls-files --stage -- /var/www/aviacao/app/Http/Controllers/Admin/LinksUteisController.php
+> git cat-file -s 873ba0aed7032b15b2d465361ddb0a3167a646c6
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/linksuteis/create.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/create.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/linksuteis/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/edit.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :resources/views/admin/linksuteis/create.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/create.blade.php
+> git show --textconv :resources/views/admin/linksuteis/edit.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/edit.blade.php
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git show --textconv :app/Link.php
+> git ls-files --stage -- /var/www/aviacao/app/Link.php
+> git show --textconv :database/migrations/2020_11_24_193851_create_links_table.php
+> git ls-files --stage -- /var/www/aviacao/database/migrations/2020_11_24_193851_create_links_table.php
+> git show --textconv :resources/views/admin/linksuteis/create.blade.php
+> git ls-files --stage -- /var/www/aviacao/resources/views/admin/linksuteis/create.blade.php

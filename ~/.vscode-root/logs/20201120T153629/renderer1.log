@@ -1,0 +1,16 @@
+[2020-11-20 15:51:22.268] [renderer1] [warning] UNRESPONSIVE extension host, 'CoenraadS.bracket-pair-colorizer-2' took 100% of 9554.604ms, saved PROFILE here: '/tmp/exthost-ee0eb7.cpuprofile' [{"id":"CoenraadS.bracket-pair-colorizer-2","total":9554327,"percentage":100}]
+[2020-11-20 15:51:30.081] [renderer1] [warning] {}
+[2020-11-20 15:53:01.955] [renderer1] [warning] {}
+[2020-11-20 15:53:18.395] [renderer1] [warning] {}
+[2020-11-20 15:53:28.867] [renderer1] [warning] {}
+[2020-11-20 15:53:55.108] [renderer1] [warning] {}
+[2020-11-20 15:54:11.997] [renderer1] [warning] {}
+[2020-11-20 15:55:15.813] [renderer1] [warning] {}
+[2020-11-20 16:00:38.402] [renderer1] [warning] {}
+[2020-11-20 16:05:58.878] [renderer1] [warning] {}
+[2020-11-20 16:06:13.726] [renderer1] [warning] {}
+[2020-11-20 16:06:15.927] [renderer1] [warning] {}
+[2020-11-20 16:06:22.743] [renderer1] [warning] {}
+[2020-11-20 16:06:31.350] [renderer1] [warning] {}
+[2020-11-20 16:06:48.127] [renderer1] [warning] {}
+[2020-11-20 16:20:53.430] [renderer1] [error] actual command NOT FOUND
